@@ -4,7 +4,10 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.View.OnFocusChangeListener;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -15,6 +18,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
+import android.widget.Toast;
 import me.winter.japteacher.alphabet.Alphabet;
 
 public class QuizActivity extends AppCompatActivity {
@@ -55,11 +59,27 @@ public class QuizActivity extends AppCompatActivity {
 
 
         final Button button = (Button)findViewById(R.id.validate);
+	    final EditText input = (EditText)findViewById(R.id.input);
+
+
+	    input.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+		    @Override
+		    public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+			    if(actionId == EditorInfo.IME_ACTION_DONE) {
+
+				    userInput(input.getText().toString());
+				    input.setText("");
+				    input.requestFocus();
+				    return true;
+			    }
+			    return false;
+		    }
+	    });
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText input = (EditText)findViewById(R.id.input);
+
                 userInput(input.getText().toString());
                 input.setText("");
             }
@@ -73,20 +93,25 @@ public class QuizActivity extends AppCompatActivity {
 
 		timings.clear();
 		score = 0;
+		updateScore();
 		lastAnswer = -1;
 
 		nextSymbol();
+
+
+		final EditText input = (EditText)findViewById(R.id.input);
+		input.performClick();
 	}
 
 	private void userInput(String answer)
     {
-        TextView error = (TextView)findViewById(R.id.error);
-        error.setText("");
+    	if(answer.length() == 0)
+    		return;
 
         if(!alphabet.containsRomaji(answer))
         {
-            error.setText("Typo ! Answer isn't present in this alphabet.");
-            return;
+	        Toast.makeText(this, "Typo ! Answer isn't present in this alphabet.", Toast.LENGTH_SHORT).show();
+	        return;
         }
 
         if(toGuess.isValid(answer))
@@ -99,6 +124,7 @@ public class QuizActivity extends AppCompatActivity {
 	        symbolsPriority.put(toGuess, symbolsPriority.get(toGuess) + 1);
             nextSymbol();
             score++;
+	        updateScore();
             lastAnswer = System.currentTimeMillis();
         }
         else
@@ -130,6 +156,11 @@ public class QuizActivity extends AppCompatActivity {
         }
     }
 
+    private void updateScore()
+    {
+    	TextView scoreDisp = (TextView)findViewById(R.id.score_display);
+	    scoreDisp.setText("Score: " + score);
+    }
 
     private void nextSymbol()
     {
