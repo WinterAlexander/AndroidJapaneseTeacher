@@ -16,13 +16,12 @@ import java.util.Map;
 import java.util.Random;
 
 import me.winter.japteacher.alphabet.Alphabet;
-import me.winter.japteacher.alphabet.Hiragana;
 
 public class QuizActivity extends AppCompatActivity {
 
     private Random random = new Random();
 
-    private Map<JapaneseCharacter, Integer> symbolsPriority;
+    private Map<JapaneseCharacter, Integer> symbolsPriority = new HashMap<>();
 
     private Alphabet alphabet;
 
@@ -30,7 +29,7 @@ public class QuizActivity extends AppCompatActivity {
     private List<Float> timings = new ArrayList<>();
 
     private JapaneseCharacter toGuess = null;
-    private long lastAnswer = -1;
+    private long lastAnswer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -49,12 +48,11 @@ public class QuizActivity extends AppCompatActivity {
             ex.printStackTrace();
         }
 
-        this.symbolsPriority = new HashMap<>();
+	    symbolsPriority.clear();
 
         for(JapaneseCharacter c : this.alphabet.getChars())
             symbolsPriority.put(c, 0);
 
-        nextSymbol();
 
         final Button button = (Button)findViewById(R.id.validate);
 
@@ -68,14 +66,26 @@ public class QuizActivity extends AppCompatActivity {
         });
     }
 
-    private void userInput(String answer)
+	@Override
+	protected void onResume()
+	{
+		super.onResume();
+
+		timings.clear();
+		score = 0;
+		lastAnswer = -1;
+
+		nextSymbol();
+	}
+
+	private void userInput(String answer)
     {
         TextView error = (TextView)findViewById(R.id.error);
         error.setText("");
 
         if(!alphabet.containsRomaji(answer))
         {
-            error.setText("Typo error ! Answer isn't present in this alphabet");
+            error.setText("Typo ! Answer isn't present in this alphabet.");
             return;
         }
 
@@ -86,6 +96,7 @@ public class QuizActivity extends AppCompatActivity {
                 float time = (System.currentTimeMillis() - lastAnswer) / 1000f;
                 timings.add(time);
             }
+	        symbolsPriority.put(toGuess, symbolsPriority.get(toGuess) + 1);
             nextSymbol();
             score++;
             lastAnswer = System.currentTimeMillis();
@@ -103,7 +114,12 @@ public class QuizActivity extends AppCompatActivity {
 
             avgTime = Math.round(avgTime * 1000f) / 1000f;
 
-            JapaneseCharacter answered = alphabet.fromRomaji(answer);
+
+	        JapaneseCharacter answered = alphabet.fromRomaji(answer);
+
+	        symbolsPriority.put(toGuess, symbolsPriority.get(toGuess) - 1);
+	        symbolsPriority.put(answered, symbolsPriority.get(toGuess));
+
             Intent myIntent = new Intent(this, FailedActivity.class);
             myIntent.putExtra("score", score);
             myIntent.putExtra("avgTime", avgTime);

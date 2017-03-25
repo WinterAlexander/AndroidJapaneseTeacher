@@ -18,6 +18,9 @@ public class FailedActivity extends AppCompatActivity
         JapaneseCharacter answered = (JapaneseCharacter)getIntent().getSerializableExtra("answered");
         JapaneseCharacter actual = (JapaneseCharacter)getIntent().getSerializableExtra("actual");
 
+        TextView correctAnswer = (TextView)findViewById(R.id.correct_answer);
+        correctAnswer.setText("The answer was " + actual.getRomaji());
+
         TextView answeredText = (TextView)findViewById(R.id.answered);
         TextView answeredSymbol = (TextView)findViewById(R.id.answered_symbol);
 
@@ -41,9 +44,7 @@ public class FailedActivity extends AppCompatActivity
         retry.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(FailedActivity.this, QuizActivity.class);
-                intent.putExtra("alphabet", FailedActivity.this.getIntent().getSerializableExtra("alphabet"));
-                startActivity(intent);
+                finish();
             }
         });
 

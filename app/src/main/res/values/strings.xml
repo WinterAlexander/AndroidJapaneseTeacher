@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">AndroidJapaneseTeacher</string>
+    <string name="you_failed">You failed !</string>
+    <string name="retry">Retry</string>
+    <string name="different">Different</string>
+    <string name="enter_the_romaji_describing_this_symbol">Enter the romaji describing this symbol:</string>
+    <string name="validate">Validate</string>
 </resources>
