@@ -48,7 +48,7 @@ public abstract class Alphabet
 		while((line = reader.readLine()) != null)
 		{
 			String[] parts = line.split(" ");
-			charList.add(new JapaneseCharacter(parts[0], parts[1]));
+			charList.add(new JapaneseCharacter(parts[0], parts[1], parts.length > 2 ? parts[2] : null));
 		}
 	}
 
@@ -60,7 +60,7 @@ public abstract class Alphabet
 	public JapaneseCharacter fromRomaji(String romaji)
 	{
 		for(JapaneseCharacter jchar : charList)
-			if(jchar.getRomaji().equalsIgnoreCase(romaji))
+			if(jchar.isValid(romaji))
 				return jchar;
 
 		return null;
@@ -69,7 +69,7 @@ public abstract class Alphabet
 	public boolean containsRomaji(String input)
 	{
 		for(JapaneseCharacter jchar : charList)
-			if(jchar.getRomaji().equalsIgnoreCase(input))
+			if(jchar.isValid(input))
 				return true;
 
 		return false;

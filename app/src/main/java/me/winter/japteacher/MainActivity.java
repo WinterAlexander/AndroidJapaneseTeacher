@@ -9,14 +9,15 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import me.winter.japteacher.alphabet.Hiragana;
+import me.winter.japteacher.alphabet.Kanji;
 import me.winter.japteacher.alphabet.Katakana;
 import me.winter.japteacher.alphabet.SimpleHiragana;
 import me.winter.japteacher.alphabet.SimpleKatakana;
 
 public class MainActivity extends ListActivity
 {
-    private static final String[] ALPHABETS = new String[] { "Hiragana", "Katakana", "Simple Hiragana", "Simple Katakana" };
-    private static final Class[] TYPES = new Class[] { Hiragana.class, Katakana.class, SimpleHiragana.class, SimpleKatakana.class };
+    private static final String[] ALPHABETS = new String[] { "Hiragana", "Katakana", "Simple Hiragana", "Simple Katakana", "Kanji" };
+    private static final Class[] TYPES = new Class[] { Hiragana.class, Katakana.class, SimpleHiragana.class, SimpleKatakana.class, Kanji.class };
 
     @Override
     protected void onCreate(Bundle savedInstanceState)

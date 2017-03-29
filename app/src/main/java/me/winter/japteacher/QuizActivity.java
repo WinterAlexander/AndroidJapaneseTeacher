@@ -2,15 +2,16 @@ package me.winter.japteacher;
 
 import android.content.Intent;
 import android.content.res.Resources;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.View.OnFocusChangeListener;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+import me.winter.japteacher.alphabet.Alphabet;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -18,11 +19,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
-import android.widget.Toast;
-import me.winter.japteacher.alphabet.Alphabet;
-
-public class QuizActivity extends AppCompatActivity {
-
+public class QuizActivity extends AppCompatActivity
+{
     private Random random = new Random();
 
     private Map<JapaneseCharacter, Integer> symbolsPriority = new HashMap<>();
@@ -98,9 +96,7 @@ public class QuizActivity extends AppCompatActivity {
 
 		nextSymbol();
 
-
-		final EditText input = (EditText)findViewById(R.id.input);
-		input.performClick();
+		findViewById(R.id.input).performClick();
 	}
 
 	private void userInput(String answer)
