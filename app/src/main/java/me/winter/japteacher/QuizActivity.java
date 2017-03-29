@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import me.winter.japteacher.alphabet.Alphabet;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -56,7 +57,8 @@ public class QuizActivity extends AppCompatActivity
             symbolsPriority.put(c, 0);
 
 
-        final Button button = (Button)findViewById(R.id.validate);
+	    final Button button = (Button)findViewById(R.id.validate);
+	    final Button dontknow = (Button)findViewById(R.id.dontknow);
 	    final EditText input = (EditText)findViewById(R.id.input);
 
 
@@ -82,6 +84,14 @@ public class QuizActivity extends AppCompatActivity
                 input.setText("");
             }
         });
+
+	    dontknow.setOnClickListener(new View.OnClickListener() {
+		    @Override
+		    public void onClick(View v) {
+
+			    giveUp();
+		    }
+	    });
     }
 
 	@Override
@@ -97,6 +107,30 @@ public class QuizActivity extends AppCompatActivity
 		nextSymbol();
 
 		findViewById(R.id.input).performClick();
+	}
+
+	private void giveUp()
+	{
+		float avgTime = 0;
+
+		for(float f : timings)
+			avgTime += f;
+
+		if(timings.size() > 0)
+			avgTime /= timings.size();
+
+		avgTime = Math.round(avgTime * 1000f) / 1000f;
+
+
+		symbolsPriority.put(toGuess, symbolsPriority.get(toGuess) - 1);
+
+		Intent myIntent = new Intent(this, FailedActivity.class);
+		myIntent.putExtra("score", score);
+		myIntent.putExtra("avgTime", avgTime);
+		myIntent.putExtra("answered", (Serializable)null);
+		myIntent.putExtra("actual", toGuess);
+		myIntent.putExtra("alphabet", alphabet.getClass());
+		startActivity(myIntent);
 	}
 
 	private void userInput(String answer)

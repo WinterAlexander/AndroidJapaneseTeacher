@@ -48,7 +48,12 @@ public abstract class Alphabet
 		while((line = reader.readLine()) != null)
 		{
 			String[] parts = line.split(" ");
-			charList.add(new JapaneseCharacter(parts[0], parts[1], parts.length > 2 ? parts[2] : null));
+			String comment = "";
+
+			for(int i = 2; i < parts.length; i++)
+				comment += parts[i] + " ";
+
+			charList.add(new JapaneseCharacter(parts[0], parts[1], comment));
 		}
 	}
 

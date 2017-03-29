@@ -5,4 +5,5 @@
     <string name="different">Different</string>
     <string name="enter_the_romaji_describing_this_symbol">Enter the romaji describing this symbol:</string>
     <string name="validate">Validate</string>
+    <string name="don_t_know">Don\'t know</string>
 </resources>

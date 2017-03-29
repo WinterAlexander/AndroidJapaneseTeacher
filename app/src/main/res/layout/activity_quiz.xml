@@ -11,56 +11,61 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="me.winter.japteacher.QuizActivity">
 
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TableRow android:gravity="center_horizontal">
-            <TextView
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+        <TextView
                 android:id="@+id/description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/enter_the_romaji_describing_this_symbol"
                 android:textSize="28sp"
                 android:textAlignment="center"
-                />
-        </TableRow>
+        />
 
-        <TableRow android:gravity="center_horizontal">
-            <TextView
+        <TextView
                 android:id="@+id/symbol"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="う"
                 android:textSize="200sp"
                 android:textAlignment="center"/>
-        </TableRow>
 
-        <TableRow android:gravity="center_horizontal">
-            <TextView android:id="@+id/score_display"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:textSize="20sp"
-                      android:text="Score: 20"
-                      android:textAlignment="center"/>
-        </TableRow>
+        <TextView android:id="@+id/score_display"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="20sp"
+                  android:text="Score: 20"
+                  android:textAlignment="center"/>
 
-        <TableRow android:gravity="center_horizontal">
-            <EditText
+        <EditText
                 android:id="@+id/input"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="50sp"
                 android:textAlignment="center"
                 android:inputType="textFilter"/>
-        </TableRow>
 
-
-        <TableRow android:gravity="center_horizontal">
-            <Button android:id="@+id/validate"
-                android:layout_width="wrap_content"
+        <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/validate"/>
-        </TableRow>
-    </TableLayout>
+                android:orientation="horizontal">
+            <Button android:id="@+id/validate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/validate"
+                    android:layout_weight="1"/>
+
+            <Button android:id="@+id/dontknow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/don_t_know"
+                    android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>

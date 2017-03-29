@@ -24,8 +24,16 @@ public class FailedActivity extends AppCompatActivity
         TextView answeredText = (TextView)findViewById(R.id.answered);
         TextView answeredSymbol = (TextView)findViewById(R.id.answered_symbol);
 
-        answeredText.setText(answered.getRomaji());
-        answeredSymbol.setText(answered.getSymbol());
+        if(answered != null)
+        {
+            answeredText.setText(answered.getRomaji());
+            answeredSymbol.setText(answered.getSymbol());
+        }
+        else
+        {
+            answeredText.setText("");
+            answeredSymbol.setText("");
+        }
 
         TextView actualText = (TextView)findViewById(R.id.actual);
         TextView actualSymbol = (TextView)findViewById(R.id.actual_symbol);

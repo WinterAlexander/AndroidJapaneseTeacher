@@ -1,7 +1,7 @@
-人 hito|jin|nin Personne, Humain
+人 hito|jin|nin Personne, être humain
 犬 inu|ken Chien
-男 otoko|o|kun|nan Homme, Male
-女 onna|me|jo|nyo|nyou Femme, Femelle
+男 otoko|o|kun|nan Homme, de sexe masculin
+女 onna|me|jo|nyo|nyou Femme, de sexe féminin
 私 watashi|watakushi|shi Je, Moi
 本 hon|moto 
 日 hi|bi|ka|nichi|jistu Jour, soleil
@@ -12,24 +12,132 @@
 味 aji|mi
 音 oto|ne|on|in
 楽 tano|gaku|raku
-映 utsu|ei
-画 kaku|ga
-名 na|mei|myou
-前 mae|zen
-国 kuni|koku|goku
+映 utsu|ei Refléter, projeter
+画 kaku|ga Trait, tracé, image, dessin, peinture
+名 na|mei|myou Nom
+前 mae|zen Devant, avant, antérieur
+国 kuni|koku|goku Pays
 読 yo|doko|toku|too
-聞 ki|bun|mon
+聞 ki|bun|mon Entendre, écouter
 見 mi|ken
-語 kata|go
+語 kata|go Raconter, mot, langue, langage
 魚 sakana|uo|gyo Poisson
 卵 tamago|ran Oeuf
 話 hana|hanashi|wa Parler
 食 ta|shoku Manger
 飲 no|in Boire
-今 ima|kon|kin Maintenant
+今 ima|kon|kin Maintenant, présent, actuel
 朝 asa|chou
-時 toki|ji
-行 i|okona|gyou|kou
-来 ku|kita|rai
-帰 kae|ki
+時 toki|ji Moment, temps, heure
+行 i|okona|gyou|kou Aller, faire, agir
+来 ku|kita|rai Venir, avenir
+帰 kae|ki Retourner
 明 aka|mei|myou Clair, éclairé, lumineux
+館 kan Grand bâtiment, bâtiment public
+家 uchi|ie|ya|ka|ke Maison, foyer, famille
+昨 saku Passé
+友 tomo|yuu Ami, amitié
+達 dachi|tachi|tatsu Suffixe qui marche le pluriel, atteindre
+何 nan|nani|ka Quoi, quel, comment
+晩 ban Soir
+一 hito|ichi|itsu Le chiffre 1
+緒 o|sho|cho Début, commencement, cordon, ficelle
+買 ka|bai Acheter
+大 oo|dai|tai Grand, gros, important
+小 chii|go|o Petit
+先 saki|ma|sen Devant, avant, d'abord
+車 kuruma|sha Voiture, véhicule
+円 en Yen, circulaire
+高 taka|kou Haut, élever, cher
+安 yasu|an Bon marché, calme, tranquille, rassuré
+新 atara|shin Sens, ton, goût, influence
+同 ona|dou Identique
+速 haya|soku Rapide, tôt
+好 su|kono|kou Aimé, apprécié
+古 furu|ko Vieux, ancien
+遅 o|oku|chi Lent, tard, en retard
+嫌 kira|iya|ken|gen Détester, dégoutant, désagréable
+子 ko|shi|su Enfant, graine, jeune pousse
+有 a|yuu Avoir, posséder, exister
+歌 uta|ka Chant, chanter, poème
+手 te|ta|shu|zu Main
+優 yasa|sugu|yuu Gentil, aimable, exceller, acteur
+分 wa|bun|fun|pun|bu Minute, partie, diviser
+秒 byou Seconde (temps)
+半 naka|han Demi, moitié
+午 go Midi
+後 ato|ushi|nochi|go|koo Après, derrière
+郵 yuu Poste, collecte et distribution
+便 bin|ben Commodité, lettre, courrier
+局 kyoku Bureau, département
+銀 gin Argent (metal)
+駅 eki Gare, station
+喫 kitsu Avaler, absorber
+茶 cha|sa Thé
+店 mise|ten Magasin, commerce
+冷 tsume|hi|sa|rei Frois, glacé, réfrigérer, se refroidir
+蔵 kura|zou Entrepôt, magasin
+庫 ko Dépôt, réserve
+肉 niku Viande, chair
+牛 ushi|gyuu Vache, bovin
+芋 imo patate|tubercule
+勉 ben Travail, effort
+強 tsuro|kyou Fort, puissant
+僕 boku Je, moi, tu, toi (pour un garçon ou homme)
+東 higashi|tou L'est (direction)
+京 miyako|kei|kyou Capitale
+英 ei Grande-Bretagne, brillant, talentueux
+荷 ni|ka Charge, fardeau
+物 mono|butsu|motsu Chose, objet
+準 jun demi-, quasi, préparatifs
+備 sona|bi Equipé, fourni
+週 shuu Semaine
+月 tsuki|getsu|gatsu Lune, mois
+曜 you Jour de la semaine
+旅 tabi|ryo Voyage
+面 otome|men Face, surface
+白 shiro|byaku|haku Blanc, pureté
+辺 ata|hen|pen Environs, voisinage
+息 iki|soku Respiration, souffle
+娘 musume Fille (ma)
+遊 aso|yuu Jouer, s'amuser, se divertir
+脱 nu|datsu Ôter, enlever un (vêtement), omettre
+待 ma|tai Attendre
+死 shi Mort, mourir
+二 ni Le nombre 2
+三 san Le nombre 3
+四 yon|shi Le nombre 4
+五 go Le nombre 5
+六 roku Le nombre 6
+七 nana|shichi Le nombre 7
+八 hachi Le nombre 8
+九 kyuu|ku Le nombre 9
+十 juu Le nombre 10
+百 hyaku|byaku|pyaku Le nombre 100
+千 sen|zen Le nombre 1 000
+万 man Le nombre 10 000
+億 oku Le nombre 100 000 000
+元 moto|gen Base, origine, cause
+気 ki|ke Esprit, énergie, sentiment
+天 ten Ciel, céleste
+族 zoku Famille, clan
+海 umi|kai Mer
+悪 waru|aku Mal, vice, méchant
+泳 oyo|ei Nager
+思 omo|shi Penser, croire
+土 tsuchi|do|to Sol, terre
+仕 tsuka|shi Servir, être au service de
+事 koto|goto|ji|zu Chose, affaire
+忙 isoga|bou Être occupé
+皆 mina|minna|kai Tout le monde, tous
+出 de|da|sui|shutsu Sortir, faire sortir
+公 kou|ku Public, officiel
+園 sono|en Jarden
+辞 ya|ji Renoncer, cesser, expression
+変 ka|hen Changer, étrange
+他 hoka|ta Autre
+火 hi|ka Feu, flamme
+水 mizu|sui Eau
+木 ki|moku|boku Arbre, bois
+金 kane|kin|kon Métal, or, argent (monnaie)
+星 hoshi|boshi|sei Étoile, planète
