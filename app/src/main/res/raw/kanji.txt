@@ -3,31 +3,31 @@
 男 otoko|o|kun|nan Homme, de sexe masculin
 女 onna|me|jo|nyo|nyou Femme, de sexe féminin
 私 watashi|watakushi|shi Je, Moi
-本 hon|moto 
+本 hon|moto Livre, origine
 日 hi|bi|ka|nichi|jistu Jour, soleil
 猫 neko Chat
-学 mana|gak|gaku
-生 i|u|sei|jou|shou|nama
-趣 omomuki|shu
-味 aji|mi
-音 oto|ne|on|in
-楽 tano|gaku|raku
+学 mana|gak|gaku Etudier, apprendre
+生 i|u|sei|jou|shou|nama Naître, vivre
+趣 omomuki|shu Sens, ton, goût, influence
+味 aji|mi Goût, saveur, goûter
+音 oto|ne|on|in Bruit, son
+楽 tano|gaku|raku Amusant, plaisant, agréable
 映 utsu|ei Refléter, projeter
 画 kaku|ga Trait, tracé, image, dessin, peinture
 名 na|mei|myou Nom
 前 mae|zen Devant, avant, antérieur
 国 kuni|koku|goku Pays
-読 yo|doko|toku|too
+読 yo|doko|toku|too Lire
 聞 ki|bun|mon Entendre, écouter
-見 mi|ken
+見 mi|ken Regarder, voir, montrer
 語 kata|go Raconter, mot, langue, langage
 魚 sakana|uo|gyo Poisson
-卵 tamago|ran Oeuf
-話 hana|hanashi|wa Parler
+卵 tamago|ran Oeuf, embryon
+話 hana|hanashi|wa Parler, raconter, histoire, récit, propos
 食 ta|shoku Manger
 飲 no|in Boire
 今 ima|kon|kin Maintenant, présent, actuel
-朝 asa|chou
+朝 asa|chou Matin, dynastie
 時 toki|ji Moment, temps, heure
 行 i|okona|gyou|kou Aller, faire, agir
 来 ku|kita|rai Venir, avenir
@@ -37,7 +37,7 @@
 家 uchi|ie|ya|ka|ke Maison, foyer, famille
 昨 saku Passé
 友 tomo|yuu Ami, amitié
-達 dachi|tachi|tatsu Suffixe qui marche le pluriel, atteindre
+達 dachi|tachi|tatsu Suffixe qui marque le pluriel, atteindre
 何 nan|nani|ka Quoi, quel, comment
 晩 ban Soir
 一 hito|ichi|itsu Le chiffre 1

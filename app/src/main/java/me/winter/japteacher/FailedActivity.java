@@ -23,23 +23,28 @@ public class FailedActivity extends AppCompatActivity
 
         TextView answeredText = (TextView)findViewById(R.id.answered);
         TextView answeredSymbol = (TextView)findViewById(R.id.answered_symbol);
+        TextView answeredComment = (TextView)findViewById(R.id.ansered_comment);
 
         if(answered != null)
         {
             answeredText.setText(answered.getRomaji());
             answeredSymbol.setText(answered.getSymbol());
+            answeredComment.setText(answered.getComment());
         }
         else
         {
             answeredText.setText("");
             answeredSymbol.setText("");
+            answeredComment.setText("");
         }
 
         TextView actualText = (TextView)findViewById(R.id.actual);
         TextView actualSymbol = (TextView)findViewById(R.id.actual_symbol);
+        TextView actualComment = (TextView)findViewById(R.id.actual_comment);
 
         actualText.setText(actual.getRomaji());
         actualSymbol.setText(actual.getSymbol());
+        actualComment.setText(actual.getComment());
 
         TextView scoreDisplay = (TextView)findViewById(R.id.score);
 
