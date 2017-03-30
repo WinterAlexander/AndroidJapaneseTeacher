@@ -30,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/correct_answer"
                 android:text="The answer was ato|ushi|nochi|go|koo"
-                android:textSize="35sp"
+                android:textSize="25sp"
                 android:textAlignment="center"
                 android:textColor="@color/colorAccent"
                 android:layout_gravity="center"/>
@@ -44,7 +44,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/answered"
                     android:text="dachi|tachi|tatsu"
-                    android:textSize="50sp"
+                    android:textSize="30sp"
                     android:textAlignment="center"
                     android:layout_weight="1"/>
             <TextView
@@ -52,7 +52,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/actual"
                     android:text="ato|ushi|nochi|go|koo"
-                    android:textSize="50sp"
+                    android:textSize="30sp"
                     android:textAlignment="center"
                     android:layout_weight="1"/>
         </LinearLayout>
@@ -107,7 +107,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/score"
                 android:text="Score: 10\nAverage time: 2.5s"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:layout_gravity="center"/>
 
         <LinearLayout

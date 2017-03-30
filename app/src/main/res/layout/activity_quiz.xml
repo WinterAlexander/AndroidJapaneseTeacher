@@ -21,7 +21,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/enter_the_romaji_describing_this_symbol"
-                android:textSize="28sp"
+                android:textSize="24sp"
                 android:textAlignment="center"
         />
 
@@ -44,7 +44,7 @@
                 android:id="@+id/input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="50sp"
+                android:textSize="20sp"
                 android:textAlignment="center"
                 android:inputType="textFilter"/>
 
