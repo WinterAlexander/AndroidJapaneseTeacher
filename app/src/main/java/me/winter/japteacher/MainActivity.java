@@ -11,13 +11,14 @@ import android.widget.ListView;
 import me.winter.japteacher.alphabet.Hiragana;
 import me.winter.japteacher.alphabet.Kanji;
 import me.winter.japteacher.alphabet.Katakana;
+import me.winter.japteacher.alphabet.Numbers;
 import me.winter.japteacher.alphabet.SimpleHiragana;
 import me.winter.japteacher.alphabet.SimpleKatakana;
 
 public class MainActivity extends ListActivity
 {
-    private static final String[] ALPHABETS = new String[] { "Hiragana", "Katakana", "Simple Hiragana", "Simple Katakana", "Kanji" };
-    private static final Class[] TYPES = new Class[] { Hiragana.class, Katakana.class, SimpleHiragana.class, SimpleKatakana.class, Kanji.class };
+    private static final String[] ALPHABETS = new String[] { "Hiragana", "Katakana", "Simple Hiragana", "Simple Katakana", "Kanji", "Numbers" };
+    private static final Class[] TYPES = new Class[] { Hiragana.class, Katakana.class, SimpleHiragana.class, SimpleKatakana.class, Kanji.class, Numbers.class };
 
     @Override
     protected void onCreate(Bundle savedInstanceState)

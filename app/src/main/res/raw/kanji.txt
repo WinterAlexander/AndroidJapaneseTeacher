@@ -40,7 +40,6 @@
 達 dachi|tachi|tatsu Suffixe qui marque le pluriel, atteindre
 何 nan|nani|ka Quoi, quel, comment
 晩 ban Soir
-一 hito|ichi|itsu Le chiffre 1
 緒 o|sho|cho Début, commencement, cordon, ficelle
 買 ka|bai Acheter
 大 oo|dai|tai Grand, gros, important
@@ -104,19 +103,6 @@
 脱 nu|datsu Ôter, enlever un (vêtement), omettre
 待 ma|tai Attendre
 死 shi Mort, mourir
-二 ni Le nombre 2
-三 san Le nombre 3
-四 yon|shi Le nombre 4
-五 go Le nombre 5
-六 roku Le nombre 6
-七 nana|shichi Le nombre 7
-八 hachi Le nombre 8
-九 kyuu|ku Le nombre 9
-十 juu Le nombre 10
-百 hyaku|byaku|pyaku Le nombre 100
-千 sen|zen Le nombre 1 000
-万 man Le nombre 10 000
-億 oku Le nombre 100 000 000
 元 moto|gen Base, origine, cause
 気 ki|ke Esprit, énergie, sentiment
 天 ten Ciel, céleste

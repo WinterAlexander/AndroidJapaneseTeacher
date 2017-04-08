@@ -1,0 +1,14 @@
+一 ichi|hito|itsu 1
+二 ni 2
+三 san 3
+四 yon|shi 4
+五 go 5
+六 roku 6
+七 nana|shichi 7
+八 hachi 8
+九 kyuu|ku 9
+十 juu 10
+百 hyaku|byaku|pyaku 100
+千 sen|zen 1 000
+万 man 10 000
+億 oku 100 000 000
