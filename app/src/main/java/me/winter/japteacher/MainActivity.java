@@ -1,14 +1,12 @@
 package me.winter.japteacher;
 
 import android.app.Activity;
-import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
 import me.winter.japteacher.alphabet.Hiragana;
 import me.winter.japteacher.alphabet.Kanji;
 import me.winter.japteacher.alphabet.Katakana;
