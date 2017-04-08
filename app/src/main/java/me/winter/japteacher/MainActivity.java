@@ -1,5 +1,6 @@
 package me.winter.japteacher;
 
+import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,20 +16,21 @@ import me.winter.japteacher.alphabet.Numbers;
 import me.winter.japteacher.alphabet.SimpleHiragana;
 import me.winter.japteacher.alphabet.SimpleKatakana;
 
-public class MainActivity extends ListActivity
+public class MainActivity extends Activity
 {
-    private static final String[] ALPHABETS = new String[] { "Hiragana", "Katakana", "Simple Hiragana", "Simple Katakana", "Kanji", "Numbers" };
+    private static final String[] ALPHABETS = new String[] { "ひらがな", "カタカナ", "ひらがな (Simple)", "カタカナ (Katakana)", "漢字", "数字" };
     private static final Class[] TYPES = new Class[] { Hiragana.class, Katakana.class, SimpleHiragana.class, SimpleKatakana.class, Kanji.class, Numbers.class };
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main);
 
-        setListAdapter(new ArrayAdapter<>(this, R.layout.activity_main, ALPHABETS));
+        ListView listView = (ListView)findViewById(R.id.alphabet_listview);
 
-        ListView listView = getListView();
+        listView.setAdapter(new ArrayAdapter<>(this, R.layout.quiz_item, ALPHABETS));
+
         listView.setTextFilterEnabled(true);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
