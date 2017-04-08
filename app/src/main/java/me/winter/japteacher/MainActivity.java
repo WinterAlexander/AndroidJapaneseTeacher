@@ -16,7 +16,7 @@ import me.winter.japteacher.alphabet.SimpleKatakana;
 
 public class MainActivity extends Activity
 {
-    private static final String[] ALPHABETS = new String[] { "ひらがな", "カタカナ", "ひらがな (Simple)", "カタカナ (Katakana)", "漢字", "数字" };
+    private static final String[] ALPHABETS = new String[] { "ひらがな", "カタカナ", "ひらがな (Simple)", "カタカナ (Simple)", "漢字", "数字" };
     private static final Class[] TYPES = new Class[] { Hiragana.class, Katakana.class, SimpleHiragana.class, SimpleKatakana.class, Kanji.class, Numbers.class };
 
     @Override

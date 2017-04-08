@@ -13,7 +13,7 @@
         android:orientation="vertical">
 
     <TextView
-            android:text="Find-the-romaji quizzes:"
+            android:text="@string/find_the_romaji_quizzes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="35sp"/>

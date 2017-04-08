@@ -10,4 +10,5 @@
     <string name="correct_answer">The answer was %1$s</string>
     <string name="score">"Score: %1$d"</string>
     <string name="typo">Typo ! Answer isn\'t present in this alphabet.</string>
+    <string name="find_the_romaji_quizzes">Find-the-romaji quizzes:</string>
 </resources>

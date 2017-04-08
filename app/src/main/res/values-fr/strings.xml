@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">AndroidJapaneseTeacher</string>
+    <string name="you_failed">Raté !</string>
+    <string name="retry">Réessayer</string>
+    <string name="different">Différent</string>
+    <string name="enter_the_romaji_describing_this_symbol">Entrez le romaji de ce symbole:</string>
+    <string name="validate">Valider</string>
+    <string name="don_t_know">Je sais pas</string>
+    <string name="score_and_time">Score: %1$d\nTemps moyen: %2$.2fs</string>
+    <string name="correct_answer">La réponse était %1$s</string>
+    <string name="score">"Score: %1$d"</string>
+    <string name="typo">Erreur de frappe ! La réponse entrée n\'est pas dans l\'alphabet.</string>
+    <string name="find_the_romaji_quizzes">Quizs trouvez-le-romaji:</string>
+</resources>
