@@ -6,4 +6,8 @@
     <string name="enter_the_romaji_describing_this_symbol">Enter the romaji describing this symbol:</string>
     <string name="validate">Validate</string>
     <string name="don_t_know">Don\'t know</string>
+    <string name="score_and_time">Score: %1$d\nAverage time: %2$.2fs</string>
+    <string name="correct_answer">The answer was %1$s</string>
+    <string name="score">"Score: %1$d"</string>
+    <string name="typo">Typo ! Answer isn\'t present in this alphabet.</string>
 </resources>

@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.regex.Pattern;
+
 public class FailedActivity extends AppCompatActivity
 {
     @Override
@@ -19,7 +21,7 @@ public class FailedActivity extends AppCompatActivity
         JapaneseCharacter actual = (JapaneseCharacter)getIntent().getSerializableExtra("actual");
 
         TextView correctAnswer = (TextView)findViewById(R.id.correct_answer);
-        correctAnswer.setText("The answer was " + actual.getRomaji());
+        correctAnswer.setText(String.format(getString(R.string.correct_answer), unstackRomajis(actual.getRomaji())));
 
         TextView answeredText = (TextView)findViewById(R.id.answered);
         TextView answeredSymbol = (TextView)findViewById(R.id.answered_symbol);
@@ -27,7 +29,7 @@ public class FailedActivity extends AppCompatActivity
 
         if(answered != null)
         {
-            answeredText.setText(answered.getRomaji());
+            answeredText.setText(unstackRomajis(answered.getRomaji()));
             answeredSymbol.setText(answered.getSymbol());
             answeredComment.setText(answered.getComment());
         }
@@ -42,7 +44,7 @@ public class FailedActivity extends AppCompatActivity
         TextView actualSymbol = (TextView)findViewById(R.id.actual_symbol);
         TextView actualComment = (TextView)findViewById(R.id.actual_comment);
 
-        actualText.setText(actual.getRomaji());
+        actualText.setText(unstackRomajis(actual.getRomaji()));
         actualSymbol.setText(actual.getSymbol());
         actualComment.setText(actual.getComment());
 
@@ -51,7 +53,8 @@ public class FailedActivity extends AppCompatActivity
         int score = getIntent().getIntExtra("score", -1);
         float avgTime = getIntent().getFloatExtra("avgTime", -1);
 
-        scoreDisplay.setText("Score: " + score + "\nAverage time: " + avgTime + "s");
+
+        scoreDisplay.setText(String.format(getString(R.string.score_and_time), score, avgTime));
 
         Button retry = (Button)findViewById(R.id.retry);
         retry.setOnClickListener(new View.OnClickListener() {
@@ -70,4 +73,22 @@ public class FailedActivity extends AppCompatActivity
             }
         });
     }
+
+    private String unstackRomajis(String romajis)
+    {
+        StringBuilder sb = new StringBuilder();
+
+        String[] romajiArray = romajis.split(Pattern.quote("|"));
+
+        if(romajiArray.length == 0)
+            return "";
+
+        sb.append(romajiArray[0]);
+
+        for(int i = 1; i < romajiArray.length; i++)
+            sb.append(',').append(' ').append(romajiArray[i]);
+
+        return sb.toString();
+    }
+
 }

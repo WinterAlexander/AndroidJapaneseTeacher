@@ -140,7 +140,7 @@ public class QuizActivity extends AppCompatActivity
 
         if(!alphabet.containsRomaji(answer))
         {
-	        Toast.makeText(this, "Typo ! Answer isn't present in this alphabet.", Toast.LENGTH_SHORT).show();
+	        Toast.makeText(this, getString(R.string.typo), Toast.LENGTH_SHORT).show();
 	        return;
         }
 
@@ -189,7 +189,7 @@ public class QuizActivity extends AppCompatActivity
     private void updateScore()
     {
     	TextView scoreDisp = (TextView)findViewById(R.id.score_display);
-	    scoreDisp.setText("Score: " + score);
+	    scoreDisp.setText(String.format(getString(R.string.score), score));
     }
 
     private void nextSymbol()
