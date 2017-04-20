@@ -31,7 +31,7 @@ public class QuizActivity extends AppCompatActivity
     private int score;
     private List<Float> timings = new ArrayList<>();
 
-    private JapaneseCharacter toGuess = null;
+    private JapaneseCharacter toGuess = null, lastSymbol = null;
     private long lastAnswer;
 
     @Override
@@ -103,6 +103,7 @@ public class QuizActivity extends AppCompatActivity
 		score = 0;
 		updateScore();
 		lastAnswer = -1;
+        lastSymbol = null;
 
 		nextSymbol();
 
@@ -225,6 +226,10 @@ public class QuizActivity extends AppCompatActivity
         if(lowests.size() <= 0)
             return null;
 
-        return lowests.get(random.nextInt(lowests.size()));
+        if(lowests.size() > 1 && lastSymbol != null)
+            lowests.remove(lastSymbol);
+
+        lastSymbol = lowests.get(random.nextInt(lowests.size()));
+        return lastSymbol;
     }
 }
