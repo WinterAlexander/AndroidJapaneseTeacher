@@ -121,8 +121,10 @@ public class QuizActivity extends AppCompatActivity
 
 		avgTime = Math.round(avgTime * 1000f) / 1000f;
 
+        for(JapaneseCharacter c : alphabet.getChars())
+            symbolsPriority.put(c, 0);
 
-		symbolsPriority.put(toGuess, symbolsPriority.get(toGuess) - 1);
+		symbolsPriority.put(toGuess, -1);
 
 		Intent myIntent = new Intent(this, FailedActivity.class);
 		myIntent.putExtra("score", score);
@@ -173,8 +175,12 @@ public class QuizActivity extends AppCompatActivity
 
 	        JapaneseCharacter answered = alphabet.fromRomaji(answer);
 
-	        symbolsPriority.put(toGuess, symbolsPriority.get(toGuess) - 1);
-	        symbolsPriority.put(answered, symbolsPriority.get(toGuess));
+
+            for(JapaneseCharacter c : alphabet.getChars())
+                symbolsPriority.put(c, 0);
+
+	        symbolsPriority.put(toGuess, -1);
+	        symbolsPriority.put(answered, -1);
 
             Intent myIntent = new Intent(this, FailedActivity.class);
             myIntent.putExtra("score", score);
