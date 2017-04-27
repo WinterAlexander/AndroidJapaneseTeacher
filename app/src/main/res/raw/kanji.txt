@@ -137,7 +137,6 @@
 下 shita Dessous, en dessous
 横 yoko À côté de
 中 naka Dedans, à l'intérieur
-後 ushi Derrière
 探 saga|tan Chercher, sonder, espionner
 場 ba|jou|chou Lieu, endroit
 所 tokoro|dokoro|jo|sho Endroit, lieu
@@ -182,3 +181,8 @@
 早 haya|sou Courir, tôt
 遠 too|en Éloigné, distant
 町 machi|chou Ville, agglomération, quartier
+春 haru|shun Printemps
+波 nami|ha Vague
+最 motto|sai Le plus
+始 haji|shi Commencer
+母 haha|bo Maman, mère
