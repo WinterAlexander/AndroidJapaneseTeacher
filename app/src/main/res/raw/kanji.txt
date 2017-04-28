@@ -186,3 +186,31 @@
 最 motto|sai Le plus
 始 haji|shi Commencer
 母 haha|bo Maman, mère
+選 era|sen Choisir
+走 hashi|sou Courir
+川 kawa|gawa|sen Rivière, cour d'eau
+森 mori|shin Forêt
+夢 yume|mu Rêve illusion
+叶 kana Exaucer (un voeu, une prière)
+無 na|bu|mu Rien, négation, ne pas être, perdre
+理 ri Raison, principe, logique
+心 kokoro|shin Coeur, sentiment, âme
+配 hai|pai Livrer, distribuer
+運 hako|un Transporter, destin, chance
+命 inochi|mei Vie, destin, ordre (donner un)
+必 kanara|hitsu Inévitable, certain
+予 arakahi|yo A l'avance, au préalable
+報 muku|hou|pou Informations, nouvelles, récompenser
+低 hiku|tei Bas, abaisser
+温 atata|on Chaleur, douceur, agréable
+度 tabi|do|taku Degré, fois, compenser
+晴 ha|sei Beau temps, s'éclaircir
+想 sou Idéal
+雨 ame Pluie
+降 fu|o|kou Descendre, tomber
+暑 atsu|sho Chaud (temps)
+外 soto|hoka|gai|ge Extérieur, autre
+動 ugo|dou Bouger, se déplacer
+取 to|shu Prendre, saisir
+干 ho|hi|kan Aérer, sécher
+
