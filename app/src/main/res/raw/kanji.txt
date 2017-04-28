@@ -136,7 +136,7 @@
 社 yashiro|sha Compagnie, association, sanctuaire shinto
 下 shita Dessous, en dessous
 横 yoko À côté de
-中 naka Dedans, à l'intérieur
+中 naka|chuu|juu Milieu, intérieur
 探 saga|tan Chercher, sonder, espionner
 場 ba|jou|chou Lieu, endroit
 所 tokoro|dokoro|jo|sho Endroit, lieu
@@ -225,3 +225,14 @@
 良 i|yo|ryou Bon, bien, satisfaisant
 寝 ne|shin Dormir
 酒 sake|shu Alcool, saké, alcool de riz
+色 iro|shiki|shoku Couleur, plaisir, sorte
+胃 i Estomac
+頭 atama|tou|zu Tête, compteur pour les gros animaux
+腹 hara|fuku Ventre
+痛 ita|tsuu Douleur, souffrir
+毎 mai Chaque, tous les
+送 oku|sou Envoyer
+別 waka|betsu Séparé
+寂 sabi|jaku|seki Triste, se sentir seul
+薬 kurusi|yaku Médicament, remède
+効 ki|kou Avoir de l'effet, être efficace
