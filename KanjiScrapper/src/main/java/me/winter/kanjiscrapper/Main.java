@@ -37,7 +37,7 @@ public class Main
 
 			File file = new File(element.ownText());
 
-			//PrintStream writer = new PrintStream(new BufferedOutputStream(new FileOutputStream(file)));
+			PrintStream writer = new PrintStream(new BufferedOutputStream(new FileOutputStream(file)));
 
 			Element table = element.parent().nextElementSibling();
 
@@ -49,27 +49,26 @@ public class Main
 			for(Element row : rows)
 			{
 				String symbol = row.child(1).text();
-
 				String romaji = row.child(4).text().trim().replaceAll(", *", "|");
-
 				String romajiPart2 = row.child(5).text().trim().replaceAll(", *", "|");
 
 				if(romajiPart2.length() != 0)
 					romaji = romaji + "|" + romajiPart2;
 
-				romaji = romaji.replaceAll("ō", "ou").replaceAll("ū", "uu").replaceAll("([a-z]+)-([a-z]+)", "$1|$1$2");
+				romaji = romaji.replaceAll("" + (char)333, "ou").replaceAll("" + (char)363, "uu").replaceAll("([a-z]+)-([a-z]+)", "$1|$1$2");
 
 				String english = row.child(3).text().trim();
 
 				english = english.substring(0, 1).toUpperCase() + english.substring(1).toLowerCase();
+				english = english.replace(';', ',');
 
-				String finalString = symbol + " " + romaji.replace(" ", "") + " " + english.replace(" ", "");
-				finalString = finalString.replace("　", "");
+				romaji = romaji.replace(" ", "").replace("-", "").replace("'", "");
 
-				System.out.println(finalString);
-				//writer.println(symbol + " " + romaji + " " + english);
+				String finalString = symbol + " " + romaji + " " + english;
+
+				writer.println(finalString);
 				current++;
-				//System.out.println(current + " / " + total);
+				System.out.println(current + " / " + total);
 			}
 
 			//writer.close();
