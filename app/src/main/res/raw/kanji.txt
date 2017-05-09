@@ -23,7 +23,7 @@
 語 kata|go Raconter, mot, langue, langage
 魚 sakana|uo|gyo Poisson
 卵 tamago|ran Oeuf, embryon
-話 hana|hanashi|wa Parler, raconter, histoire, récit, propos
+話 hanasu|hanashi|wa Parler, raconter, histoire, récit, propos
 食 ta|shoku Manger
 飲 no|in Boire
 今 ima|kon|kin Maintenant, présent, actuel
@@ -236,3 +236,4 @@
 寂 sabi|jaku|seki Triste, se sentir seul
 薬 kurusi|yaku Médicament, remède
 効 ki|kou Avoir de l'effet, être efficace
+貝
