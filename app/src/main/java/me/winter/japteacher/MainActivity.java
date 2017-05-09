@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import me.winter.japteacher.alphabet.All;
 import me.winter.japteacher.alphabet.Hiragana;
 import me.winter.japteacher.alphabet.Kanji;
 import me.winter.japteacher.alphabet.Katakana;
@@ -16,8 +17,8 @@ import me.winter.japteacher.alphabet.SimpleKatakana;
 
 public class MainActivity extends Activity
 {
-    private static final String[] ALPHABETS = new String[] { "ひらがな", "カタカナ", "ひらがな (Simple)", "カタカナ (Simple)", "漢字", "数字" };
-    private static final Class[] TYPES = new Class[] { Hiragana.class, Katakana.class, SimpleHiragana.class, SimpleKatakana.class, Kanji.class, Numbers.class };
+    private static final String[] ALPHABETS = new String[] { "ひらがな", "カタカナ", "ひらがな (Simple)", "カタカナ (Simple)", "漢字", "数字", "全部" };
+    private static final Class[] TYPES = new Class[] { Hiragana.class, Katakana.class, SimpleHiragana.class, SimpleKatakana.class, Kanji.class, Numbers.class, All.class };
 
     @Override
     protected void onCreate(Bundle savedInstanceState)

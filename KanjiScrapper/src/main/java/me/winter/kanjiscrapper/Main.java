@@ -10,7 +10,6 @@ import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
-import java.io.PrintWriter;
 
 
 /**
@@ -20,7 +19,7 @@ import java.io.PrintWriter;
  */
 public class Main
 {
-	public static final String URL = "http://www.crapulescorp.net/japonais/cours/ecritures/kanji/liste_kanji_grade_1a9.php5";
+	public static final String URL = "https://en.wikipedia.org/wiki/Ky%C5%8Diku_kanji";
 
 	public static void main(String[] args) throws Throwable
 	{
@@ -28,55 +27,61 @@ public class Main
 
 		Document doc = response.parse();
 
-		for(Element element : doc.select("h3"))
+		for(Element element : doc.select("h3 > .mw-headline"))
 		{
+			if(!element.id().contains("29"))
+				continue;
+
+			System.out.println();
 			System.out.println(element.ownText());
 
 			File file = new File(element.ownText());
 
-			PrintStream writer = new PrintStream(new BufferedOutputStream(new FileOutputStream(file)));
+			//PrintStream writer = new PrintStream(new BufferedOutputStream(new FileOutputStream(file)));
 
-			Element p = element.nextElementSibling();
+			Element table = element.parent().nextElementSibling();
 
-			Elements links = p.select("a");
+			Elements rows = table.select("tr:has(td)");
 
-			int total = links.size();
+			int total = rows.size();
 			int current = 0;
 
-			for(Element link : links)
+			for(Element row : rows)
 			{
-				Document kanjiPage = Jsoup.connect(link.attr("abs:href")).execute().parse();
+				String symbol = row.child(1).text();
 
+				String romaji = row.child(4).text().trim().replaceAll(", *", "|");
 
-				StringBuilder entry = new StringBuilder();
+				String romajiPart2 = row.child(5).text().trim().replaceAll(", *", "|");
 
-				entry.append(kanjiPage.select("td > span").text()).append(' ');
+				if(romajiPart2.length() != 0)
+					romaji = romaji + "|" + romajiPart2;
 
+				romaji = romaji.replaceAll("ō", "ou").replaceAll("ū", "uu").replaceAll("([a-z]+)-([a-z]+)", "$1|$1$2");
 
-				for(Element answer : kanjiPage.select("ul > li > ul > li"))
-					entry.append(answer.ownText().split("\\[")[1].split("]")[0]).append("|");
+				String english = row.child(3).text().trim();
 
-				entry.deleteCharAt(entry.length() - 1);
-				entry.append(" ");
+				english = english.substring(0, 1).toUpperCase() + english.substring(1).toLowerCase();
 
-				for(Element meaning : kanjiPage.select("td > ul > li"))
-				{
-					if(meaning.ownText().toLowerCase().contains("yomi") || meaning.ownText().toLowerCase().contains("=") || meaning.ownText().toLowerCase().contains("...") || meaning.ownText().trim().length() == 0)
-						continue;
+				String finalString = symbol + " " + romaji.replace(" ", "") + " " + english.replace(" ", "");
+				finalString = finalString.replace("　", "");
 
-					entry.append(meaning.ownText()).append(", ");
-				}
-
-				entry.deleteCharAt(entry.length() - 1);
-				entry.deleteCharAt(entry.length() - 1);
-
-				writer.println(entry);
-
+				System.out.println(finalString);
+				//writer.println(symbol + " " + romaji + " " + english);
 				current++;
-				System.out.println(current + " / " + total);
+				//System.out.println(current + " / " + total);
 			}
 
-			writer.close();
+			//writer.close();
 		}
 	}
+/*
+	public static void main(String[] args)
+	{
+		String testString = "ō";
+
+		testString = testString.replaceAll("ō", "ou");
+
+		System.out.println(testString);
+	}*/
 }

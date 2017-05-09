@@ -13,9 +13,4 @@ public class Katakana extends Alphabet
 		loadFromResource(resources, R.raw.katakana);
 	}
 
-	@Override
-	public String getName()
-	{
-		return "Katakana";
-	}
 }

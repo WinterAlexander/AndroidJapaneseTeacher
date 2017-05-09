@@ -11,10 +11,4 @@ public class Hiragana extends Alphabet
 		super();
 		loadFromResource(resources, R.raw.hiragana);
 	}
-
-	@Override
-	public String getName()
-	{
-		return "Hiragana";
-	}
 }

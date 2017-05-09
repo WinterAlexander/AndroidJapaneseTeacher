@@ -11,10 +11,4 @@ public class Kanji extends Alphabet
 		super();
 		loadFromResource(resources, R.raw.kanji);
 	}
-
-	@Override
-	public String getName()
-	{
-		return "Kanji";
-	}
 }

@@ -15,10 +15,4 @@ public class SimpleKatakana extends Alphabet
 		super();
 		loadFromResource(resources, R.raw.simplekatakana);
 	}
-
-	@Override
-	public String getName()
-	{
-		return "Katakana";
-	}
 }

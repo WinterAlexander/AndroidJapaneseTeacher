@@ -15,10 +15,4 @@ public class Numbers extends Alphabet
 		super();
 		loadFromResource(resources, R.raw.numbers);
 	}
-
-	@Override
-	public String getName()
-	{
-		return "Numbers";
-	}
 }

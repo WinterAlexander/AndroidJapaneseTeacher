@@ -18,8 +18,6 @@ public abstract class Alphabet
 {
 	private List<JapaneseCharacter> charList;
 
-	public abstract String getName();
-
 	public Alphabet()
 	{
 		this.charList = new ArrayList<>();
