@@ -26,8 +26,8 @@
 父 fu|chichi|tou @kanji_105
 姉 shi|ane @kanji_106
 兄 kei|kyou|ani @kanji_107
-弟 tei|dai|otouto @kanji_108
-妹 mai|imouto @kanji_109
+弟 tei|dai|otooto @kanji_108
+妹 mai|imooto @kanji_109
 自 ji|shi|mizuka|mizukara @kanji_110
 友 yuu|tomo @kanji_111
 体 tai|karada @kanji_112
@@ -37,7 +37,7 @@
 首 shu|kubi @kanji_116
 心 shin|kokoro @kanji_117
 時 ji|toki @kanji_118
-曜 you @kanji_119
+曜 yō @kanji_119
 朝 chou|asa @kanji_120
 昼 chuu|hiru @kanji_121
 夜 ya|yoru @kanji_122
@@ -56,7 +56,7 @@
 南 nan|minami @kanji_135
 東 tou|higashi|azuma @kanji_136
 西 sei|sai|nishi @kanji_137
-遠 en|tou|toui @kanji_138
+遠 en|too|tooi @kanji_138
 近 kin|chika|chikai @kanji_139
 前 zen|mae @kanji_140
 後 go|kou|nochi|ushi|ushiro|ato @kanji_141
@@ -83,7 +83,7 @@
 戸 ko|to|be @kanji_162
 家 ka|ke|ie @kanji_163
 寺 ji|tera @kanji_164
-通 tsuu|tou|touru @kanji_165
+通 tsuu|too|tooru @kanji_165
 門 mon|kado @kanji_166
 道 dou|michi @kanji_167
 話 wa|hanashi|hana|hanasu @kanji_168
@@ -99,7 +99,7 @@
 画 ga|kaku @kanji_178
 絵 kai|e @kanji_179
 図 zu|haka|hakaru @kanji_180
-工 kou|ku @kanji_181
+工 kō|ku @kanji_181
 教 kyou|oshi|oshieru @kanji_182
 晴 sei|hare @kanji_183
 思 shi|omo|omou @kanji_184
@@ -150,7 +150,7 @@
 当 tou|a|ataru @kanji_229
 台 dai|tai @kanji_230
 楽 gaku|raku|tano|tanoshii @kanji_231
-公 kou|ouyake @kanji_232
+公 kou|ooyake @kanji_232
 引 in|hi|hiku @kanji_233
 科 ka @kanji_234
 歌 ka|uta @kanji_235

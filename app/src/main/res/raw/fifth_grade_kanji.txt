@@ -11,7 +11,7 @@
 俵 hyou|tawara @kanji_650
 個 ko @kanji_651
 備 bi|sona|sonaeru @kanji_652
-像 zou @kanji_653
+像 zō @kanji_653
 再 sai|sa|futata|futatabi @kanji_654
 刊 kan @kanji_655
 判 han|waka|wakaru @kanji_656
@@ -38,7 +38,7 @@
 夢 mu|yume @kanji_677
 妻 sai|tsuma @kanji_678
 婦 fu @kanji_679
-容 you @kanji_680
+容 yō @kanji_680
 寄 ki|yo|yoru @kanji_681
 富 fu|tomi @kanji_682
 導 dou|michibi|michibiku @kanji_683
@@ -51,11 +51,11 @@
 序 jo @kanji_690
 弁 ben @kanji_691
 張 chou|ha|haru @kanji_692
-往 ou @kanji_693
+往 ō @kanji_693
 復 fuku @kanji_694
 徳 toku @kanji_695
 志 shi|kokorozashi @kanji_696
-応 ou @kanji_697
+応 ō @kanji_697
 快 kai|kokoroyo|kokoroyoi @kanji_698
 性 sei|shou|saga @kanji_699
 恩 on @kanji_700
@@ -100,7 +100,7 @@
 燃 nen|mo|moeru @kanji_739
 版 han @kanji_740
 犯 han|oka|okasu @kanji_741
-状 jou @kanji_742
+状 jō @kanji_742
 独 doku|hito|hitori @kanji_743
 率 ritsu|sotsu|hiki|hikiiru @kanji_744
 現 gen|arawa|arawareru @kanji_745
@@ -123,7 +123,7 @@
 統 tou|su|suberu @kanji_762
 絶 zetsu|ta|tatsu @kanji_763
 綿 men|wata @kanji_764
-総 sou @kanji_765
+総 sō @kanji_765
 編 hen|a|amu @kanji_766
 績 seki @kanji_767
 織 shiki|o|oru @kanji_768
@@ -133,7 +133,7 @@
 耕 kou|tagaya|tagayasu @kanji_772
 職 shoku @kanji_773
 肥 hi|ko|koyasu @kanji_774
-能 nou @kanji_775
+能 nō @kanji_775
 興 kyou|oko|okosu @kanji_776
 舌 zetsu|shita @kanji_777
 舎 sha @kanji_778
@@ -146,8 +146,8 @@
 設 setsu|mou|moukeru @kanji_785
 許 kyo|yuru|yurusu @kanji_786
 証 shou|akashi @kanji_787
-評 hyou @kanji_788
-講 kou @kanji_789
+評 hyō @kanji_788
+講 kō @kanji_789
 謝 sha|ayama|ayamaru @kanji_790
 識 shiki @kanji_791
 護 go|mamo|mamoru @kanji_792
@@ -156,7 +156,7 @@
 貧 hin|mazu|mazushii @kanji_795
 責 seki|se|semeru @kanji_796
 貸 tai|ka|kasu @kanji_797
-貿 bou @kanji_798
+貿 bō @kanji_798
 賀 ga @kanji_799
 資 shi @kanji_800
 賛 san @kanji_801
@@ -170,8 +170,8 @@
 過 ka|ayama|ayamachi @kanji_809
 適 teki @kanji_810
 酸 san @kanji_811
-鉱 kou @kanji_812
-銅 dou @kanji_813
+鉱 kō @kanji_812
+銅 dō @kanji_813
 銭 sen|zeni @kanji_814
 防 bou|fuse|fusegu @kanji_815
 限 gen|kagi|kagiru @kanji_816
@@ -180,6 +180,6 @@
 雑 zatsu @kanji_819
 非 hi|ara|arazu @kanji_820
 預 yo|azu|azukeru @kanji_821
-領 ryou @kanji_822
+領 ryō @kanji_822
 額 gaku|hitai @kanji_823
 飼 shi|ka|kau @kanji_824

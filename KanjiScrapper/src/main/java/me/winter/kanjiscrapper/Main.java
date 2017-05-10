@@ -48,9 +48,9 @@ public class Main
 			System.out.println();
 			System.out.println(fileName);
 
-			//File file = new File("KanjiScrapper/" + fileName);
+			File file = new File("KanjiScrapper/" + fileName);
 
-			//PrintStream writer = new PrintStream(new BufferedOutputStream(new FileOutputStream(file)));
+			PrintStream writer = new PrintStream(new BufferedOutputStream(new FileOutputStream(file)));
 
 			Element table = element.parent().nextElementSibling();
 
@@ -66,9 +66,9 @@ public class Main
 				String romajiPart2 = row.child(5).text().trim().replaceAll(", *", "|");
 
 				if(romajiPart2.length() != 0)
-					romaji = romaji + "|" + romajiPart2;
+					romaji = romaji.replaceAll("" + (char)333, "ou") + "|" + romajiPart2.replaceAll("" + (char)333, "oo");
 
-				romaji = romaji.replaceAll("" + (char)333, "ou").replaceAll("" + (char)363, "uu").replaceAll("([a-z]+)-([a-z]+)", "$1|$1$2");
+				romaji = romaji.replaceAll("" + (char)363, "uu").replaceAll("([a-z]+)-([a-z]+)", "$1|$1$2");
 
 				String english = row.child(3).text().trim();
 
@@ -80,7 +80,7 @@ public class Main
 				String finalString = symbol + " " + romaji + " @kanji_" + kanjiId;
 
 				//stringWriter.println("<string name=\"kanji_" + kanjiId + "\">" + english + "</string>");
-
+/*
 				Document frDoc = Jsoup.connect("https://fr.wiktionary.org/wiki/" + symbol).execute().parse();
 
 				Element japaneseTitle = frDoc.select("h2:has(#Japonais)").first();
@@ -102,16 +102,16 @@ public class Main
 					System.out.println(section.text());
 
 					//frDoc.select("ol > li")
-				}
+				}*/
 
 				//frWriter.println();
-				//writer.println(finalString);
+				writer.println(finalString);
 				current++;
 				kanjiId++;
 				System.out.println(current + " / " + total);
 			}
 
-			//writer.close();
+			writer.close();
 		}
 
 		//stringWriter.close();

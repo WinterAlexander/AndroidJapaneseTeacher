@@ -7,7 +7,7 @@
 七 shichi|nana|nanatsu @kanji_6
 八 hachi|yat|yattsu @kanji_7
 九 ku|kyuu|kokono|kokonotsu @kanji_8
-十 juu|tou @kanji_9
+十 juu|too @kanji_9
 百 hyaku|momo @kanji_10
 千 sen|chi @kanji_11
 上 jou|ue @kanji_12
@@ -15,7 +15,7 @@
 左 sa|hidari @kanji_14
 右 u|yuu|migi @kanji_15
 中 chuu|juu|naka @kanji_16
-大 dai|tai|ou|oukii @kanji_17
+大 dai|tai|oo|ookii @kanji_17
 小 shou|chii|chiisai|ko|o @kanji_18
 月 gatsu|getsu|tsuki @kanji_19
 日 nichi|jitsu|hi|ka @kanji_20
