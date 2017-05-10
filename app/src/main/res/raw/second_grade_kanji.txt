@@ -26,8 +26,8 @@
 父 fu|chichi|tou @kanji_105
 姉 shi|ane @kanji_106
 兄 kei|kyou|ani @kanji_107
-弟 tei|dai|otooto @kanji_108
-妹 mai|imooto @kanji_109
+弟 tei|dai|otouto @kanji_108
+妹 mai|imouto @kanji_109
 自 ji|shi|mizuka|mizukara @kanji_110
 友 yuu|tomo @kanji_111
 体 tai|karada @kanji_112
