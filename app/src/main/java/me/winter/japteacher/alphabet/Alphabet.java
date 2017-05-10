@@ -3,7 +3,6 @@ package me.winter.japteacher.alphabet;
 import android.content.res.Resources;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -28,7 +27,24 @@ public abstract class Alphabet
 		try
 		{
 			InputStream stream = resources.openRawResource(resource);
-			loadFrom(stream);
+			BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
+
+			String line;
+
+			while((line = reader.readLine()) != null)
+			{
+				String[] parts = line.split(" ");
+				String comment = "";
+
+				for(int i = 2; i < parts.length; i++)
+					comment += parts[i] + " ";
+
+				JapaneseCharacter japaneseCharacter = new JapaneseCharacter(parts[0], parts[1], comment);
+
+				japaneseCharacter.tag = resource;
+
+				charList.add(japaneseCharacter);
+			}
 			stream.close();
 		}
 		catch(Exception ex)
@@ -37,31 +53,17 @@ public abstract class Alphabet
 		}
 	}
 
-	protected void loadFrom(InputStream stream) throws IOException
-	{
-		BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
-
-		String line;
-
-		while((line = reader.readLine()) != null)
-		{
-			String[] parts = line.split(" ");
-			String comment = "";
-
-			for(int i = 2; i < parts.length; i++)
-				comment += parts[i] + " ";
-
-			charList.add(new JapaneseCharacter(parts[0], parts[1], comment));
-		}
-	}
-
 	public List<JapaneseCharacter> getChars()
 	{
 		return this.charList;
 	}
 
-	public JapaneseCharacter fromRomaji(String romaji)
+	public JapaneseCharacter fromRomaji(String romaji, Object tag)
 	{
+		for(JapaneseCharacter jchar : charList)
+			if(tag.equals(jchar.tag) && jchar.isValid(romaji))
+				return jchar;
+
 		for(JapaneseCharacter jchar : charList)
 			if(jchar.isValid(romaji))
 				return jchar;

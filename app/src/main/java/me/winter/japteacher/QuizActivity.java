@@ -171,7 +171,7 @@ public class QuizActivity extends AppCompatActivity
             avgTime = Math.round(avgTime * 1000f) / 1000f;
 
 
-	        JapaneseCharacter answered = alphabet.fromRomaji(answer);
+	        JapaneseCharacter answered = alphabet.fromRomaji(answer, toGuess.tag);
 
 
             symbolsPriority.put(toGuess, symbolsPriority.get(toGuess) - 1);	

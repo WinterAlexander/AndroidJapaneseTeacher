@@ -27,17 +27,30 @@ public class Main
 
 		Document doc = response.parse();
 
+		//File strings = new File("values/strings.xml");
+		//PrintStream stringWriter = new PrintStream(new BufferedOutputStream(new FileOutputStream(strings)));
+
+
+		//File frStrings = new File("values-fr/strings.xml");
+		//PrintStream frWriter = new PrintStream(new BufferedOutputStream(new FileOutputStream(frStrings)));
+
+		int kanjiId = 0;
+
 		for(Element element : doc.select("h3 > .mw-headline"))
 		{
 			if(!element.id().contains("29"))
 				continue;
 
+			String fileName = element.ownText();
+
+			fileName = fileName.replaceAll("\\([^()]*\\)", "").trim().replace(" ", "_").toLowerCase() + "_kanji.txt";
+
 			System.out.println();
-			System.out.println(element.ownText());
+			System.out.println(fileName);
 
-			File file = new File(element.ownText());
+			//File file = new File("KanjiScrapper/" + fileName);
 
-			PrintStream writer = new PrintStream(new BufferedOutputStream(new FileOutputStream(file)));
+			//PrintStream writer = new PrintStream(new BufferedOutputStream(new FileOutputStream(file)));
 
 			Element table = element.parent().nextElementSibling();
 
@@ -64,23 +77,44 @@ public class Main
 
 				romaji = romaji.replace(" ", "").replace("-", "").replace("'", "");
 
-				String finalString = symbol + " " + romaji + " " + english;
+				String finalString = symbol + " " + romaji + " @kanji_" + kanjiId;
 
-				writer.println(finalString);
+				//stringWriter.println("<string name=\"kanji_" + kanjiId + "\">" + english + "</string>");
+
+				Document frDoc = Jsoup.connect("https://fr.wiktionary.org/wiki/" + symbol).execute().parse();
+
+				Element japaneseTitle = frDoc.select("h2:has(#Japonais)").first();
+
+				for(Element section = japaneseTitle; !section.text().contains("Vietnamien"); section = section.nextElementSibling())
+				{
+					if(!section.tagName().equals("h3"))
+						continue;
+
+					if(section.children().size() != 2)
+						continue;
+
+					Element span = section.child(0);
+
+					if(!span.id().contains("Nom_commun"))
+						continue;
+
+					section = section.nextElementSibling().nextElementSibling().nextElementSibling();
+					System.out.println(section.text());
+
+					//frDoc.select("ol > li")
+				}
+
+				//frWriter.println();
+				//writer.println(finalString);
 				current++;
+				kanjiId++;
 				System.out.println(current + " / " + total);
 			}
 
 			//writer.close();
 		}
+
+		//stringWriter.close();
+		//frWriter.close();
 	}
-/*
-	public static void main(String[] args)
-	{
-		String testString = "ō";
-
-		testString = testString.replaceAll("ō", "ou");
-
-		System.out.println(testString);
-	}*/
 }

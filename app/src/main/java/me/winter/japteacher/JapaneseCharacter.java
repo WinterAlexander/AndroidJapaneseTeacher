@@ -9,6 +9,8 @@ public class JapaneseCharacter implements Serializable
 {
 	private String symbol, romaji, comment;
 
+	public Object tag = null;
+
 	public JapaneseCharacter(@NonNull String symbol, @NonNull String romaji)
 	{
 		this(symbol, romaji, null);

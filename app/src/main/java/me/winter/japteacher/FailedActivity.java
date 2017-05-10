@@ -31,7 +31,11 @@ public class FailedActivity extends AppCompatActivity
         {
             answeredText.setText(unstackRomajis(answered.getRomaji()));
             answeredSymbol.setText(answered.getSymbol());
-            answeredComment.setText(answered.getComment());
+
+            if(answered.getComment().startsWith("@"))
+                answeredComment.setText(getResources().getIdentifier(answered.getComment().substring(1).trim(), "string", getPackageName()));
+            else
+                answeredComment.setText(answered.getComment());
         }
         else
         {
@@ -46,7 +50,10 @@ public class FailedActivity extends AppCompatActivity
 
         actualText.setText(unstackRomajis(actual.getRomaji()));
         actualSymbol.setText(actual.getSymbol());
-        actualComment.setText(actual.getComment());
+        if(actual.getComment().startsWith("@"))
+            actualComment.setText(getResources().getIdentifier(actual.getComment().substring(1).trim(), "string", getPackageName()));
+        else
+            actualComment.setText(actual.getComment());
 
         TextView scoreDisplay = (TextView)findViewById(R.id.score);
 

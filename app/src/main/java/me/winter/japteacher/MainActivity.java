@@ -8,17 +8,46 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import me.winter.japteacher.alphabet.All;
+import me.winter.japteacher.alphabet.FifthGradeKanji;
+import me.winter.japteacher.alphabet.FirstGradeKanji;
+import me.winter.japteacher.alphabet.FourthGradeKanji;
 import me.winter.japteacher.alphabet.Hiragana;
 import me.winter.japteacher.alphabet.Kanji;
 import me.winter.japteacher.alphabet.Katakana;
-import me.winter.japteacher.alphabet.Numbers;
+import me.winter.japteacher.alphabet.SecondGradeKanji;
 import me.winter.japteacher.alphabet.SimpleHiragana;
 import me.winter.japteacher.alphabet.SimpleKatakana;
+import me.winter.japteacher.alphabet.SixthGradeKanji;
+import me.winter.japteacher.alphabet.ThirdGradeKanji;
 
 public class MainActivity extends Activity
 {
-    private static final String[] ALPHABETS = new String[] { "ひらがな", "カタカナ", "ひらがな (Simple)", "カタカナ (Simple)", "漢字", "数字", "全部" };
-    private static final Class[] TYPES = new Class[] { Hiragana.class, Katakana.class, SimpleHiragana.class, SimpleKatakana.class, Kanji.class, Numbers.class, All.class };
+    private static final String[] ALPHABETS = new String[] {
+            "ひらがな",
+		    "カタカナ",
+		    "ひらがな (Simple)",
+		    "カタカナ (Simple)",
+		    "一年生漢字",
+		    "二年生漢字",
+		    "三年生漢字",
+		    "四年生漢字",
+		    "五年生漢字",
+		    "六年生漢字",
+		    "教育漢字",
+		    "全て" };
+    private static final Class[] TYPES = new Class[] {
+    		Hiragana.class,
+		    Katakana.class,
+		    SimpleHiragana.class,
+		    SimpleKatakana.class,
+		    FirstGradeKanji.class,
+		    SecondGradeKanji.class,
+		    ThirdGradeKanji.class,
+		    FourthGradeKanji.class,
+		    FifthGradeKanji.class,
+		    SixthGradeKanji.class,
+		    Kanji.class,
+		    All.class };
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
