@@ -48,7 +48,7 @@ public class Main
 			System.out.println();
 			System.out.println(fileName);
 
-			File file = new File("KanjiScrapper/" + fileName);
+			File file = new File(fileName);
 
 			PrintStream writer = new PrintStream(new BufferedOutputStream(new FileOutputStream(file)));
 
@@ -65,8 +65,10 @@ public class Main
 				String romaji = row.child(4).text().trim().replaceAll(", *", "|");
 				String romajiPart2 = row.child(5).text().trim().replaceAll(", *", "|");
 
+				romaji = romaji.replaceAll("" + (char)333, "ou");
+
 				if(romajiPart2.length() != 0)
-					romaji = romaji.replaceAll("" + (char)333, "ou") + "|" + romajiPart2.replaceAll("" + (char)333, "oo");
+					romaji = romaji + "|" + romajiPart2.replaceAll("" + (char)333, "oo");
 
 				romaji = romaji.replaceAll("" + (char)363, "uu").replaceAll("([a-z]+)-([a-z]+)", "$1|$1$2");
 

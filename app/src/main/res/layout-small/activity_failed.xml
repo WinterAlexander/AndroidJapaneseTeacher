@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_failed"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="me.winter.japteacher.FailedActivity">
+
+
+
+    <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/failed_message"
+                    android:text="@string/you_failed"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:layout_gravity="center"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/correct_answer"
+                    android:text="Possible answers were: ato, ushi, nochi, go and koo"
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorAccent"
+                    android:layout_gravity="center"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <TextView
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/answered"
+                        android:text="dachi, tachi or tatsu"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        android:layout_weight="1"/>
+                <TextView
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/actual"
+                        android:text="ato, ushi, nochi, go or koo"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        android:layout_weight="1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <TextView
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/answered_symbol"
+                        android:text="ひゃ"
+                        android:textSize="80sp"
+                        android:textAlignment="center"
+                        android:layout_weight="1"/>
+                <TextView
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/actual_symbol"
+                        android:text="後"
+                        android:textSize="80sp"
+                        android:textAlignment="center"
+                        android:layout_weight="1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="20sp">
+                <TextView
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ansered_comment"
+                        android:text="Suffixe qui marque le pluriel, atteindre"
+                        android:textSize="15sp"
+                        android:textAlignment="center"
+                        android:layout_weight="1"/>
+                <TextView
+                        android:layout_width="0sp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/actual_comment"
+                        android:text="Après, derrière"
+                        android:textSize="15sp"
+                        android:textAlignment="center"
+                        android:layout_weight="1"/>
+            </LinearLayout>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/score"
+                    android:text="Score: 10\nAverage time: 2.5s"
+                    android:textSize="18sp"
+                    android:layout_gravity="center"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="20sp">
+
+
+                <View android:layout_width="0sp"
+                      android:layout_height="0sp"
+                      android:layout_weight="1" />
+
+
+                <Button
+                        android:id="@+id/retry"
+                        android:text="@string/retry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"/>
+
+                <View android:layout_width="0sp"
+                      android:layout_height="0sp"
+                      android:layout_weight="1" />
+
+                <Button
+                        android:id="@+id/different"
+                        android:text="@string/different"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"/>
+
+
+                <View android:layout_width="0sp"
+                      android:layout_height="0sp"
+                      android:layout_weight="1" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

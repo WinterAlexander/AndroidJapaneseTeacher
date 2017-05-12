@@ -35,10 +35,10 @@
 和 wa|yawa|yawaragu|nago|nagoyaka @kanji_274
 品 hin|shina @kanji_275
 員 in @kanji_276
-商 shō @kanji_277
+商 shou @kanji_277
 問 mon|to|tou|ton @kanji_278
 坂 han|saka @kanji_279
-央 ō @kanji_280
+央 ou @kanji_280
 始 shi|haji|hajimeru @kanji_281
 委 i|yuda|yudaneru @kanji_282
 守 shu|mamo|mamoru @kanji_283
@@ -68,7 +68,7 @@
 息 soku|iki @kanji_307
 悪 aku|waru|warui @kanji_308
 悲 hi|kana|kanashii @kanji_309
-想 sō @kanji_310
+想 sou @kanji_310
 意 i @kanji_311
 感 kan @kanji_312
 所 sho|tokoro @kanji_313
@@ -82,7 +82,7 @@
 旅 ryo|tabi @kanji_321
 族 zoku @kanji_322
 昔 seki|shaku|mukashi @kanji_323
-昭 shō @kanji_324
+昭 shou @kanji_324
 暑 sho|atsu|atsui @kanji_325
 暗 an|kura|kurai @kanji_326
 曲 kyoku|ma|magaru @kanji_327
@@ -93,7 +93,7 @@
 柱 chuu|hashira @kanji_332
 根 kon|ne @kanji_333
 植 shoku|u|ueru @kanji_334
-業 gyō @kanji_335
+業 gyou @kanji_335
 様 you|sama @kanji_336
 横 ou|yoko @kanji_337
 橋 kyou|hashi @kanji_338
@@ -106,7 +106,7 @@
 波 ha|nami @kanji_345
 注 chuu|soso|sosogu @kanji_346
 泳 ei|oyo|oyogu @kanji_347
-洋 yō @kanji_348
+洋 you @kanji_348
 流 ryuu|naga|nagareru @kanji_349
 消 shou|ki|kieru|ke|kesu @kanji_350
 深 shin|fuka|fukai @kanji_351
@@ -137,9 +137,9 @@
 神 shin|jin|kami @kanji_376
 祭 sai|matsu|matsuri @kanji_377
 福 fuku @kanji_378
-秒 byō @kanji_379
+秒 byou @kanji_379
 究 kyuu|kiwa|kiwameru @kanji_380
-章 shō @kanji_381
+章 shou @kanji_381
 童 dou|warabe @kanji_382
 笛 teki|fue @kanji_383
 第 dai @kanji_384
@@ -172,7 +172,7 @@
 身 shin|mi @kanji_411
 転 ten|koro|korobu @kanji_412
 軽 kei|karu|karui @kanji_413
-農 nō @kanji_414
+農 nou @kanji_414
 返 hen|kae|kaesu @kanji_415
 追 tsui|o|ou @kanji_416
 送 sou|oku|okuru @kanji_417

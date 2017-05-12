@@ -37,7 +37,7 @@
 首 shu|kubi @kanji_116
 心 shin|kokoro @kanji_117
 時 ji|toki @kanji_118
-曜 yō @kanji_119
+曜 you @kanji_119
 朝 chou|asa @kanji_120
 昼 chuu|hiru @kanji_121
 夜 ya|yoru @kanji_122
@@ -99,7 +99,7 @@
 画 ga|kaku @kanji_178
 絵 kai|e @kanji_179
 図 zu|haka|hakaru @kanji_180
-工 kō|ku @kanji_181
+工 kou|ku @kanji_181
 教 kyou|oshi|oshieru @kanji_182
 晴 sei|hare @kanji_183
 思 shi|omo|omou @kanji_184

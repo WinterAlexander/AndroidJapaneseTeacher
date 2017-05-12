@@ -11,7 +11,7 @@
 便 ben|bin|tayo|tayori @kanji_450
 信 shin @kanji_451
 倉 sou|kura @kanji_452
-候 kō @kanji_453
+候 kou @kanji_453
 借 shaku|ka|kariru @kanji_454
 停 tei @kanji_455
 健 ken @kanji_456
@@ -29,14 +29,14 @@
 利 ri @kanji_468
 刷 satsu|su|suru @kanji_469
 副 fuku @kanji_470
-功 kō @kanji_471
+功 kou @kanji_471
 加 ka|kuwa|kuwaeru @kanji_472
 努 do|tsuto|tsutomeru @kanji_473
 労 rou|negira|negirau @kanji_474
 勇 yuu|isa|isamu @kanji_475
 包 hou|tsutsu|tsutsumu @kanji_476
 卒 sotsu @kanji_477
-協 kyō @kanji_478
+協 kyou @kanji_478
 単 tan @kanji_479
 博 haku @kanji_480
 印 in|shirushi @kanji_481
@@ -52,7 +52,7 @@
 囲 i|kako|kakou @kanji_491
 固 ko|kata|katamaru @kanji_492
 型 kei|kata @kanji_493
-堂 dō @kanji_494
+堂 dou @kanji_494
 塩 en|shio @kanji_495
 士 shi @kanji_496
 変 hen|ka|kawaru @kanji_497
@@ -72,7 +72,7 @@
 帯 tai|obi @kanji_511
 底 tei|soko @kanji_512
 府 fu @kanji_513
-康 kō @kanji_514
+康 kou @kanji_514
 建 ken|ta|tateru @kanji_515
 径 kei @kanji_516
 徒 to @kanji_517
@@ -88,7 +88,7 @@
 救 kyuu|suku|sukuu @kanji_527
 敗 hai|yabu|yabureru @kanji_528
 散 san|chi|chiru @kanji_529
-料 ryō @kanji_530
+料 ryou @kanji_530
 旗 ki|hata @kanji_531
 昨 saku @kanji_532
 景 kei @kanji_533
@@ -106,7 +106,7 @@
 梅 bai|ume @kanji_545
 械 kai @kanji_546
 極 kyoku|kiwa|kiwameru @kanji_547
-標 hyō @kanji_548
+標 hyou @kanji_548
 機 ki|hata @kanji_549
 欠 ketsu|ka|kakeru @kanji_550
 歴 reki @kanji_551
@@ -117,7 +117,7 @@
 民 min|tami @kanji_556
 求 kyuu|moto|motomu @kanji_557
 治 chi|ji|osa|osameru|nao|naoru @kanji_558
-法 hō @kanji_559
+法 hou @kanji_559
 泣 kyuu|na|naku @kanji_560
 浅 sen|asa|asai @kanji_561
 浴 yoku|a|abiru @kanji_562
@@ -136,7 +136,7 @@
 的 teki|mato @kanji_575
 省 shou|sei|habu|habuku @kanji_576
 祝 shuku|iwa|iwau @kanji_577
-票 hyō @kanji_578
+票 hyou @kanji_578
 種 shu|tane @kanji_579
 積 seki|tsu|tsumu @kanji_580
 競 kyou|kiso|kisou @kanji_581
@@ -155,7 +155,7 @@
 脈 myaku @kanji_594
 腸 chou|harawata @kanji_595
 臣 shin @kanji_596
-航 kō @kanji_597
+航 kou @kanji_597
 良 ryou|yo|yoi @kanji_598
 芸 gei @kanji_599
 芽 ga|me @kanji_600
@@ -171,11 +171,11 @@
 説 setsu|to|toku @kanji_610
 課 ka @kanji_611
 議 gi @kanji_612
-象 zō|shō @kanji_613
+象 zou|shou @kanji_613
 貨 ka @kanji_614
 貯 cho|ta|tameru @kanji_615
 費 hi|tsui|tsuiyasu @kanji_616
-賞 shō @kanji_617
+賞 shou @kanji_617
 軍 gun @kanji_618
 輪 rin|wa @kanji_619
 辞 ji|kotoba|ya|yameru @kanji_620
@@ -184,7 +184,7 @@
 達 |tachi @kanji_623
 選 sen|era|erabu @kanji_624
 郡 gun @kanji_625
-量 ryō @kanji_626
+量 ryou @kanji_626
 録 roku @kanji_627
 鏡 kyou|kagami @kanji_628
 関 kan|seki @kanji_629
