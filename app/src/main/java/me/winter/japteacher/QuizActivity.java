@@ -1,5 +1,6 @@
 package me.winter.japteacher;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
@@ -10,10 +11,12 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import me.winter.japteacher.alphabet.Alphabet;
 
 import java.io.Serializable;
@@ -23,8 +26,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
-public class QuizActivity extends AppCompatActivity
-{
+public class QuizActivity extends AppCompatActivity {
     private Random random = new Random();
 
     private Map<JapaneseCharacter, Integer> symbolsPriority = new HashMap<>();
@@ -38,8 +40,7 @@ public class QuizActivity extends AppCompatActivity
     private long lastAnswer;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         int size = getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK;
 
         if (size == Configuration.SCREENLAYOUT_SIZE_NORMAL || size == Configuration.SCREENLAYOUT_SIZE_SMALL) {
@@ -49,142 +50,140 @@ public class QuizActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
-        try
-        {
+        try {
             Class type = (Class) getIntent().getSerializableExtra("alphabet");
 
             alphabet = (Alphabet) type.getConstructor(Resources.class).newInstance(getResources());
-        }
-        catch (Exception ex)
-        {
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
 
-	    symbolsPriority.clear();
+        symbolsPriority.clear();
 
-        for(JapaneseCharacter c : this.alphabet.getChars())
+        for (JapaneseCharacter c : this.alphabet.getChars())
             symbolsPriority.put(c, 0);
 
+        final Button button = (Button) findViewById(R.id.validate);
+        final Button dontknow = (Button) findViewById(R.id.dontknow);
+        final EditText input = (EditText) findViewById(R.id.input);
 
-	    final Button button = (Button)findViewById(R.id.validate);
-	    final Button dontknow = (Button)findViewById(R.id.dontknow);
-	    final EditText input = (EditText)findViewById(R.id.input);
+        input.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_DONE) {
 
-
-	    input.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-		    @Override
-		    public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-			    if(actionId == EditorInfo.IME_ACTION_DONE) {
-
-				    userInput(input.getText().toString());
-				    input.setText("");
-				    input.requestFocus();
-				    return true;
-			    }
-			    return false;
-		    }
-	    });
+                    userInput(input.getText().toString());
+                    input.setText("");
+                    input.requestFocus();
+                    return true;
+                }
+                return false;
+            }
+        });
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 userInput(input.getText().toString());
                 input.setText("");
             }
         });
 
-	    dontknow.setOnClickListener(new View.OnClickListener() {
-		    @Override
-		    public void onClick(View v) {
-
-			    giveUp();
-		    }
-	    });
+        dontknow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                giveUp();
+            }
+        });
     }
 
-	@Override
-	protected void onResume()
-	{
-		super.onResume();
+    @Override
+    protected void onResume() {
+        super.onResume();
 
-		timings.clear();
-		score = 0;
-		updateScore();
-		lastAnswer = -1;
+        timings.clear();
+        score = 0;
+        updateScore();
+        lastAnswer = -1;
         lastSymbol = null;
 
-		nextSymbol();
+        nextSymbol();
+    }
 
-		findViewById(R.id.input).performClick();
-	}
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        if (!hasFocus)
+            return;
 
-	private void giveUp()
-	{
-		float avgTime = 0;
+        final EditText tb = (EditText) findViewById(R.id.input);
+        tb.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                inputMethodManager.showSoftInput(tb, InputMethodManager.SHOW_IMPLICIT);
+            }
+        }, 100);
+    }
 
-		for(float f : timings)
-			avgTime += f;
+    private void giveUp() {
+        float avgTime = 0;
 
-		if(timings.size() > 0)
-			avgTime /= timings.size();
+        for (float f : timings)
+            avgTime += f;
 
-		avgTime = Math.round(avgTime * 1000f) / 1000f;
+        if (timings.size() > 0)
+            avgTime /= timings.size();
+
+        avgTime = Math.round(avgTime * 1000f) / 1000f;
 
         symbolsPriority.put(toGuess, symbolsPriority.get(toGuess) - 1);
 
-		Intent myIntent = new Intent(this, FailedActivity.class);
-		myIntent.putExtra("score", score);
-		myIntent.putExtra("avgTime", avgTime);
-		myIntent.putExtra("answered", (Serializable)null);
-		myIntent.putExtra("actual", toGuess);
-		myIntent.putExtra("alphabet", alphabet.getClass());
-		startActivity(myIntent);
-	}
+        Intent myIntent = new Intent(this, FailedActivity.class);
+        myIntent.putExtra("score", score);
+        myIntent.putExtra("avgTime", avgTime);
+        myIntent.putExtra("answered", (Serializable) null);
+        myIntent.putExtra("actual", toGuess);
+        myIntent.putExtra("alphabet", alphabet.getClass());
+        startActivity(myIntent);
+    }
 
-	private void userInput(String answer)
-    {
-    	if(answer.length() == 0)
-    		return;
+    private void userInput(String answer) {
+        if (answer.length() == 0)
+            return;
 
-        if(!alphabet.containsRomaji(answer))
-        {
-	        Toast.makeText(this, getString(R.string.typo), Toast.LENGTH_SHORT).show();
-	        return;
+        if (!alphabet.containsRomaji(answer)) {
+            Toast.makeText(this, getString(R.string.typo), Toast.LENGTH_SHORT).show();
+            return;
         }
 
-        if(toGuess.isValid(answer))
-        {
-            if(lastAnswer >= 0)
-            {
+        if (toGuess.isValid(answer)) {
+            if (lastAnswer >= 0) {
                 float time = (System.currentTimeMillis() - lastAnswer) / 1000f;
                 timings.add(time);
             }
-	        symbolsPriority.put(toGuess, symbolsPriority.get(toGuess) + 1);
+            symbolsPriority.put(toGuess, symbolsPriority.get(toGuess) + 1);
             nextSymbol();
             score++;
-	        updateScore();
+            updateScore();
             lastAnswer = System.currentTimeMillis();
-        }
-        else
-        {
+        } else {
 
             float avgTime = 0;
 
-            for(float f : timings)
+            for (float f : timings)
                 avgTime += f;
 
-            if(timings.size() > 0)
+            if (timings.size() > 0)
                 avgTime /= timings.size();
 
             avgTime = Math.round(avgTime * 1000f) / 1000f;
 
 
-	        JapaneseCharacter answered = alphabet.fromRomaji(answer, toGuess.tag);
+            JapaneseCharacter answered = alphabet.fromRomaji(answer, toGuess.tag);
 
 
-            symbolsPriority.put(toGuess, symbolsPriority.get(toGuess) - 1);	
- 	        symbolsPriority.put(answered, symbolsPriority.get(toGuess));
+            symbolsPriority.put(toGuess, symbolsPriority.get(toGuess) - 1);
+            symbolsPriority.put(answered, symbolsPriority.get(toGuess));
 
             Intent myIntent = new Intent(this, FailedActivity.class);
             myIntent.putExtra("score", score);
@@ -196,40 +195,35 @@ public class QuizActivity extends AppCompatActivity
         }
     }
 
-    private void updateScore()
-    {
-    	TextView scoreDisp = (TextView)findViewById(R.id.score_display);
-	    scoreDisp.setText(String.format(getString(R.string.score), score));
+    private void updateScore() {
+        TextView scoreDisp = (TextView) findViewById(R.id.score_display);
+        scoreDisp.setText(String.format(getString(R.string.score), score));
     }
 
-    private void nextSymbol()
-    {
-        TextView textView = (TextView)findViewById(R.id.symbol);
+    private void nextSymbol() {
+        TextView textView = (TextView) findViewById(R.id.symbol);
 
         toGuess = random();
         textView.setText(toGuess.getSymbol());
     }
 
-    private JapaneseCharacter random()
-    {
+    private JapaneseCharacter random() {
         List<JapaneseCharacter> lowests = new ArrayList<>();
         int lowestUses = Integer.MAX_VALUE;
-        for(JapaneseCharacter current : symbolsPriority.keySet())
-        {
-            if(symbolsPriority.get(current) == lowestUses)
+        for (JapaneseCharacter current : symbolsPriority.keySet()) {
+            if (symbolsPriority.get(current) == lowestUses)
                 lowests.add(current);
-            else if(symbolsPriority.get(current) < lowestUses)
-            {
+            else if (symbolsPriority.get(current) < lowestUses) {
                 lowests.clear();
                 lowests.add(current);
                 lowestUses = symbolsPriority.get(current);
             }
         }
 
-        if(lowests.size() <= 0)
+        if (lowests.size() <= 0)
             return null;
 
-        if(lowests.size() > 1 && lastSymbol != null)
+        if (lowests.size() > 1 && lastSymbol != null)
             lowests.remove(lastSymbol);
 
         lastSymbol = lowests.get(random.nextInt(lowests.size()));
