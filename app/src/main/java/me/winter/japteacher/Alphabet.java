@@ -1,10 +1,11 @@
-package me.winter.japteacher.alphabet;
+package me.winter.japteacher;
 
 import android.content.res.Resources;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +14,7 @@ import me.winter.japteacher.JapaneseCharacter;
 /**
  * Created by Alexander Winter on 2016-09-19.
  */
-public abstract class Alphabet
+public class Alphabet implements Serializable
 {
 	private List<JapaneseCharacter> charList;
 
@@ -22,7 +23,7 @@ public abstract class Alphabet
 		this.charList = new ArrayList<>();
 	}
 
-	protected void loadFromResource(Resources resources, int resource)
+	public void loadFromResource(Resources resources, int resource)
 	{
 		try
 		{

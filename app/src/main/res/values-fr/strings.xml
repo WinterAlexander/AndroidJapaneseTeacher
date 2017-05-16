@@ -11,4 +11,20 @@
     <string name="score">"Score: %1$d"</string>
     <string name="typo">Erreur de frappe ! La réponse entrée n\'est pas dans l\'alphabet.</string>
     <string name="find_the_romaji_quizzes">Quizs trouvez-le-romaji:</string>
+    <string name="enable_multiselect">Activer multisélection</string>
+    <string name="disable_multiselect">Désactiver multisélection</string>
+    <string name="play_with_this_selection">Jouer avec cette sélection</string>
+    <string name="select_an_alphabet">Vous devez sélectionner au moins un alphabet !</string>
+    <string name="kanji_0">Un</string>
+    <string name="kanji_1">Deux</string>
+    <string name="kanji_2">Trois</string>
+    <string name="kanji_3">Quatre</string>
+    <string name="kanji_4">Cinq</string>
+    <string name="kanji_5">Six</string>
+    <string name="kanji_6">Sept</string>
+    <string name="kanji_7">Huit</string>
+    <string name="kanji_8">Neuf</string>
+    <string name="kanji_9">Dix</string>
+    <string name="kanji_10">Cent</string>
+    <string name="kanji_11">Mille</string>
 </resources>

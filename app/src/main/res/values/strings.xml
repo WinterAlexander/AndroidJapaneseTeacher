@@ -11,6 +11,10 @@
     <string name="score">"Score: %1$d"</string>
     <string name="typo">Typo ! Answer isn\'t present in this alphabet.</string>
     <string name="find_the_romaji_quizzes">Find-the-romaji quizzes:</string>
+    <string name="enable_multiselect">Enable multiselect</string>
+    <string name="disable_multiselect">Disable multiselect</string>
+    <string name="play_with_this_selection">Play with this selection</string>
+    <string name="select_an_alphabet">You must select at least one alphabet.</string>
     <string name="kanji_0">One</string>
     <string name="kanji_1">Two</string>
     <string name="kanji_2">Three</string>

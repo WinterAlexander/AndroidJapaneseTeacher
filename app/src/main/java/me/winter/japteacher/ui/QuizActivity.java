@@ -1,4 +1,4 @@
-package me.winter.japteacher;
+package me.winter.japteacher.ui;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,17 +8,17 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import me.winter.japteacher.Alphabet;
+import me.winter.japteacher.JapaneseCharacter;
+import me.winter.japteacher.R;
 
-import me.winter.japteacher.alphabet.Alphabet;
-
+import java.io.InvalidObjectException;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -45,19 +45,22 @@ public class QuizActivity extends AppCompatActivity
     {
         int size = getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK;
 
-        if (size == Configuration.SCREENLAYOUT_SIZE_NORMAL || size == Configuration.SCREENLAYOUT_SIZE_SMALL) {
+        if(size == Configuration.SCREENLAYOUT_SIZE_NORMAL || size == Configuration.SCREENLAYOUT_SIZE_SMALL)
             setTheme(R.style.NoTitleAppTheme);
-        }
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
-        try {
-            Class type = (Class)getIntent().getSerializableExtra("alphabet");
-
-            alphabet = (Alphabet)type.getConstructor(Resources.class).newInstance(getResources());
-        } catch (Exception ex) {
+        try
+        {
+            alphabet = (Alphabet)getIntent().getSerializableExtra("alphabet");
+            if(alphabet.getChars().size() == 0)
+            	throw new InvalidObjectException("Alphabet is empty !");
+        }
+        catch(Exception ex)
+        {
             ex.printStackTrace();
+            return;
         }
 
         symbolsPriority.clear();
@@ -183,7 +186,6 @@ public class QuizActivity extends AppCompatActivity
 
             JapaneseCharacter answered = alphabet.fromRomaji(answer, toGuess.tag);
 
-
             symbolsPriority.put(toGuess, symbolsPriority.get(toGuess) - 1);
 
             for(JapaneseCharacter jchar : alphabet.listFromRomaji(answer))
@@ -191,7 +193,6 @@ public class QuizActivity extends AppCompatActivity
 	            symbolsPriority.put(jchar, symbolsPriority.get(toGuess));
 	            forcedNext = answered;
             }
-
 
             Intent myIntent = new Intent(this, FailedActivity.class);
             myIntent.putExtra("score", score);
