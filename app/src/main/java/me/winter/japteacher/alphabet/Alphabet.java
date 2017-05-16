@@ -71,6 +71,17 @@ public abstract class Alphabet
 		return null;
 	}
 
+	public List<JapaneseCharacter> listFromRomaji(String romaji)
+	{
+		List<JapaneseCharacter> characters = new ArrayList<>();
+
+		for(JapaneseCharacter jchar : charList)
+			if(jchar.isValid(romaji))
+				characters.add(jchar);
+
+		return characters;
+	}
+
 	public boolean containsRomaji(String input)
 	{
 		for(JapaneseCharacter jchar : charList)

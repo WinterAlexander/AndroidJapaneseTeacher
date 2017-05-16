@@ -26,7 +26,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
-public class QuizActivity extends AppCompatActivity {
+public class QuizActivity extends AppCompatActivity
+{
     private Random random = new Random();
 
     private Map<JapaneseCharacter, Integer> symbolsPriority = new HashMap<>();
@@ -36,11 +37,12 @@ public class QuizActivity extends AppCompatActivity {
     private int score;
     private List<Float> timings = new ArrayList<>();
 
-    private JapaneseCharacter toGuess = null, lastSymbol = null;
+    private JapaneseCharacter toGuess = null, lastSymbol = null, forcedNext = null;
     private long lastAnswer;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         int size = getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK;
 
         if (size == Configuration.SCREENLAYOUT_SIZE_NORMAL || size == Configuration.SCREENLAYOUT_SIZE_SMALL) {
@@ -51,9 +53,9 @@ public class QuizActivity extends AppCompatActivity {
         setContentView(R.layout.activity_quiz);
 
         try {
-            Class type = (Class) getIntent().getSerializableExtra("alphabet");
+            Class type = (Class)getIntent().getSerializableExtra("alphabet");
 
-            alphabet = (Alphabet) type.getConstructor(Resources.class).newInstance(getResources());
+            alphabet = (Alphabet)type.getConstructor(Resources.class).newInstance(getResources());
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -183,7 +185,13 @@ public class QuizActivity extends AppCompatActivity {
 
 
             symbolsPriority.put(toGuess, symbolsPriority.get(toGuess) - 1);
-            symbolsPriority.put(answered, symbolsPriority.get(toGuess));
+
+            for(JapaneseCharacter jchar : alphabet.listFromRomaji(answer))
+            {
+	            symbolsPriority.put(jchar, symbolsPriority.get(toGuess));
+	            forcedNext = answered;
+            }
+
 
             Intent myIntent = new Intent(this, FailedActivity.class);
             myIntent.putExtra("score", score);
@@ -207,7 +215,15 @@ public class QuizActivity extends AppCompatActivity {
         textView.setText(toGuess.getSymbol());
     }
 
-    private JapaneseCharacter random() {
+    private JapaneseCharacter random()
+    {
+    	if(forcedNext != null)
+	    {
+	    	JapaneseCharacter next = forcedNext;
+		    forcedNext = null;
+		    return next;
+	    }
+
         List<JapaneseCharacter> lowests = new ArrayList<>();
         int lowestUses = Integer.MAX_VALUE;
         for (JapaneseCharacter current : symbolsPriority.keySet()) {
