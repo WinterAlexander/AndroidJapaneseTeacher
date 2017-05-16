@@ -1,8 +1,8 @@
 package me.winter.japteacher;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -20,7 +20,7 @@ import me.winter.japteacher.alphabet.SimpleKatakana;
 import me.winter.japteacher.alphabet.SixthGradeKanji;
 import me.winter.japteacher.alphabet.ThirdGradeKanji;
 
-public class MainActivity extends Activity
+public class MainActivity extends AppCompatActivity
 {
     private static final String[] ALPHABETS = new String[] {
             "ひらがな",
@@ -58,8 +58,6 @@ public class MainActivity extends Activity
         ListView listView = (ListView)findViewById(R.id.alphabet_listview);
 
         listView.setAdapter(new ArrayAdapter<>(this, R.layout.quiz_item, ALPHABETS));
-
-        listView.setTextFilterEnabled(true);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
