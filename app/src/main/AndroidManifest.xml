@@ -18,11 +18,11 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.FailedActivity"
+        <activity android:name=".ui.alphabet.FailedActivity"
                   android:screenOrientation="portrait"
                   android:configChanges="orientation|keyboardHidden"/>
 
-        <activity android:name=".ui.QuizActivity"
+        <activity android:name=".ui.alphabet.AlphabetQuizActivity"
                   android:screenOrientation="portrait"
                   android:configChanges="orientation|keyboardHidden" />
     </application>

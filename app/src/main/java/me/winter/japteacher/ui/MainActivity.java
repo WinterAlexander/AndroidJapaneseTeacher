@@ -1,7 +1,6 @@
 package me.winter.japteacher.ui;
 
 import android.content.Intent;
-import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -15,6 +14,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 import me.winter.japteacher.Alphabet;
 import me.winter.japteacher.R;
+import me.winter.japteacher.ui.alphabet.AlphabetQuizActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -59,13 +59,13 @@ public class MainActivity extends AppCompatActivity
 
         ListView listView = (ListView)findViewById(R.id.alphabet_listview);
 
-        listView.setAdapter(new ArrayAdapter<>(this, R.layout.quiz_item, ALPHABETS));
+        listView.setAdapter(new ArrayAdapter<>(this, R.layout.listview_item, ALPHABETS));
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             	if(!multiSelect)
 	            {
-		            Intent intent = new Intent(MainActivity.this, QuizActivity.class);
+		            Intent intent = new Intent(MainActivity.this, AlphabetQuizActivity.class);
 
 		            Alphabet alphabet = new Alphabet();
 		            alphabet.loadFromResource(getResources(), TYPES[position]);
@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity
 				    return;
 			    }
 
-			    Intent intent = new Intent(MainActivity.this, QuizActivity.class);
+			    Intent intent = new Intent(MainActivity.this, AlphabetQuizActivity.class);
 
 			    Alphabet alphabet = new Alphabet();
 

@@ -1,4 +1,4 @@
-package me.winter.japteacher.ui;
+package me.winter.japteacher.ui.alphabet;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import me.winter.japteacher.JapaneseCharacter;
 import me.winter.japteacher.R;
+import me.winter.japteacher.ui.MainActivity;
 
 import java.util.regex.Pattern;
 
@@ -17,7 +18,7 @@ public class FailedActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_failed);
+        setContentView(R.layout.activity_alphabetquiz_failed);
 
         JapaneseCharacter answered = (JapaneseCharacter)getIntent().getSerializableExtra("answered");
         JapaneseCharacter actual = (JapaneseCharacter)getIntent().getSerializableExtra("actual");

@@ -1,9 +1,8 @@
-package me.winter.japteacher.ui;
+package me.winter.japteacher.ui.alphabet;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
@@ -26,7 +25,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
-public class QuizActivity extends AppCompatActivity
+public class AlphabetQuizActivity extends AppCompatActivity
 {
     private Random random = new Random();
 
@@ -49,7 +48,7 @@ public class QuizActivity extends AppCompatActivity
             setTheme(R.style.NoTitleAppTheme);
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quiz);
+        setContentView(R.layout.activity_alphabetquiz);
 
         try
         {

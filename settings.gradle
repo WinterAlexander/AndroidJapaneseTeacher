@@ -1,4 +1,4 @@
 include ':app'
-include 'KanjiScrapper'
-include 'QuizAlphabetsJaponais'
+//include 'KanjiScrapper'
+//include 'QuizAlphabetsJaponais'
 
