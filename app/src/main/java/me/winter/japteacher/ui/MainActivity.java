@@ -59,7 +59,19 @@ public class MainActivity extends AppCompatActivity
 
         ListView listView = (ListView)findViewById(R.id.alphabet_listview);
 
-        listView.setAdapter(new ArrayAdapter<>(this, R.layout.listview_item, ALPHABETS));
+        listView.setAdapter(new ArrayAdapter<String>(this, R.layout.listview_item, ALPHABETS) {
+	        @Override
+	        public int getViewTypeCount() {
+
+		        return getCount();
+	        }
+
+	        @Override
+	        public int getItemViewType(int position) {
+
+		        return position;
+	        }
+        });
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -68,20 +80,20 @@ public class MainActivity extends AppCompatActivity
 		            Intent intent = new Intent(MainActivity.this, AlphabetQuizActivity.class);
 
 		            Alphabet alphabet = new Alphabet();
-		            alphabet.loadFromResource(getResources(), TYPES[position]);
+		            alphabet.loadFromResource(getResources(), TYPES[(int)id]);
 
 		            intent.putExtra("alphabet", alphabet);
 		            startActivity(intent);
 	            }
 	            else
 	            {
-	            	if(selection.contains(TYPES[position]))
+	            	if(selection.contains(TYPES[(int)id]))
 		            {
-			            selection.remove(Integer.valueOf(TYPES[position]));
+			            selection.remove(Integer.valueOf(TYPES[(int)id]));
 			            view.setBackgroundColor(android.R.color.background_light);
 			            return;
 		            }
-	            	selection.add(TYPES[position]);
+	            	selection.add(TYPES[(int)id]);
 	            	view.setBackgroundColor(R.color.colorSelected);
 	            }
             }
