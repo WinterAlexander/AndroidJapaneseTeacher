@@ -31,10 +31,10 @@
             android:text="@string/play_with_this_selection"
             android:visibility="invisible"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="0sp"/>
 
     <TextView
-            android:text="@string/other_quizzes"
+            android:text="@string/vocabulary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="35sp"

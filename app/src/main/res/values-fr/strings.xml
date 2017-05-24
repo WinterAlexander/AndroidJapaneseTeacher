@@ -10,12 +10,12 @@
     <string name="correct_answer">La réponse était %1$s</string>
     <string name="score">"Score: %1$d"</string>
     <string name="typo">Erreur de frappe ! La réponse entrée n\'est pas dans l\'alphabet.</string>
-    <string name="find_the_romaji_quizzes">Quizs trouvez-le-romaji:</string>
+    <string name="find_the_romaji_quizzes">Alphabets:</string>
     <string name="enable_multiselect">Activer multisélection</string>
     <string name="disable_multiselect">Désactiver multisélection</string>
     <string name="play_with_this_selection">Jouer avec cette sélection</string>
     <string name="select_an_alphabet">Vous devez sélectionner au moins un alphabet !</string>
-    <string name="other_quizzes">Autres quizs:</string>
+    <string name="other_quizzes">Vocabulaire:</string>
     <string name="expression_1">Un moment, un instant</string>
     <string name="expression_2">Bon rétablissement</string>
     <string name="expression_3">En gros/en général</string>

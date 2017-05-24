@@ -10,12 +10,12 @@
     <string name="correct_answer">The answer was %1$s</string>
     <string name="score">"Score: %1$d"</string>
     <string name="typo">Typo ! Answer isn\'t present in this alphabet.</string>
-    <string name="find_the_romaji_quizzes">Find-the-romaji quizzes:</string>
+    <string name="find_the_romaji_quizzes">Alphabets:</string>
     <string name="enable_multiselect">Enable multiselect</string>
     <string name="disable_multiselect">Disable multiselect</string>
     <string name="play_with_this_selection">Play with this selection</string>
     <string name="select_an_alphabet">You must select at least one alphabet.</string>
-    <string name="other_quizzes">Other quizzes:</string>
+    <string name="vocabulary">Vocabulary:</string>
     <string name="expression_1">Awhile, a moment</string>
     <string name="expression_2">Good recovery, get well</string>
     <string name="expression_3">Basically, generally</string>

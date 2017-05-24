@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.LinearLayout.LayoutParams;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -19,6 +20,8 @@ import me.winter.japteacher.ui.alphabet.AlphabetQuizActivity;
 import java.util.ArrayList;
 import java.util.List;
 
+import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
+import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 import static android.widget.Toast.LENGTH_SHORT;
 
 public class MainActivity extends AppCompatActivity
@@ -163,6 +166,8 @@ public class MainActivity extends AppCompatActivity
 
 			Button button = (Button)findViewById(R.id.go);
 			button.setVisibility(multiSelect ? View.VISIBLE : View.INVISIBLE);
+
+			button.setLayoutParams(new LayoutParams(MATCH_PARENT, multiSelect ?  WRAP_CONTENT : 0));
 		}
 
 		return super.onOptionsItemSelected(item);
