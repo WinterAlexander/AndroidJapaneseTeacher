@@ -16,6 +16,7 @@ import android.widget.Toast;
 import me.winter.japteacher.Alphabet;
 import me.winter.japteacher.R;
 import me.winter.japteacher.ui.alphabet.AlphabetQuizActivity;
+import me.winter.japteacher.ui.vocabulary.VocabularyQuizActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -154,6 +155,10 @@ public class MainActivity extends AppCompatActivity
 	    vocabListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 		    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 			    //goto vocabulary quiz
+
+			    Intent intent = new Intent(MainActivity.this, VocabularyQuizActivity.class);
+
+			    startActivity(intent);
 		    }
 	    });
     }

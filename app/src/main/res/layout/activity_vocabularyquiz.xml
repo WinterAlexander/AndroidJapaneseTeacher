@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_vocabularyquiz"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        tools:context="me.winter.japteacher.ui.vocabulary.VocabularyQuizActivity">
+
+    <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_answer"
+            android:textSize="15sp"
+            android:textAlignment="center"/>
+
+    <TextView
+            android:id="@+id/symbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ありがとうございます"
+            android:textSize="50sp"
+            android:textAlignment="center"/>
+
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="1">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_gravity="bottom">
+
+            <TextView android:id="@+id/score_display"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textSize="15sp"
+                      android:text="Score: 20"
+                      android:textAlignment="center"/>
+
+            <ScrollView android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                <LinearLayout
+                        android:id="@+id/answers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+                    <Button
+                            android:id="@+id/answer1"
+                            android:text="Merci"
+                            android:textAllCaps="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    <Button
+                            android:id="@+id/answer2"
+                            android:text="Merci beaucoup"
+                            android:textAllCaps="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    <Button
+                            android:id="@+id/answer3"
+                            android:text="Un instant"
+                            android:textAllCaps="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    <Button
+                            android:id="@+id/answer4"
+                            android:text="Désolé"
+                            android:textAllCaps="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    <Button
+                            android:id="@+id/answer5"
+                            android:text="Bon matin"
+                            android:textAllCaps="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    <Button
+                            android:id="@+id/answer6"
+                            android:text="Allô"
+                            android:textAllCaps="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

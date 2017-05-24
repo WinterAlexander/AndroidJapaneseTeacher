@@ -17,6 +17,7 @@
     <string name="select_an_alphabet">You must select at least one alphabet.</string>
     <string name="vocabulary">Vocabulary:</string>
     <string name="expressions">Expressions</string>
+    <string name="select_answer">Select the meaning corresponding to this word:</string>
     <string name="expression_1">Awhile, a moment</string>
     <string name="expression_2">Good recovery, get well</string>
     <string name="expression_3">Basically, generally</string>

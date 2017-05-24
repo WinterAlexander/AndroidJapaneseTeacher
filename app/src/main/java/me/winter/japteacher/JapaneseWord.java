@@ -3,20 +3,24 @@ package me.winter.japteacher;
 import android.support.annotation.NonNull;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Undocumented :(
  * <p>
  * Created by Alexander Winter on 2017-05-22.
  */
-public class JapaneseIdiom implements Serializable
+public class JapaneseWord implements Serializable
 {
 	private String content, translation;
+	private List<String> synonyms;
 
-	public JapaneseIdiom(@NonNull String content, @NonNull String translation)
+	public JapaneseWord(@NonNull String content, @NonNull String translation)
 	{
 		this.content = content;
 		this.translation = translation;
+		synonyms = new ArrayList<>();
 	}
 
 	@NonNull
@@ -31,8 +35,8 @@ public class JapaneseIdiom implements Serializable
 		return translation;
 	}
 
-	public boolean isSynonym(JapaneseIdiom other)
+	public List<String> getSynonyms()
 	{
-		return translation.equalsIgnoreCase(other.getTranslation());
+		return synonyms;
 	}
 }
