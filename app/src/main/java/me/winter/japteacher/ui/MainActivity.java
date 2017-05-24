@@ -36,7 +36,8 @@ public class MainActivity extends AppCompatActivity
 		    "三年生漢字",
 		    "四年生漢字",
 		    "五年生漢字",
-		    "六年生漢字"};
+		    "六年生漢字"
+    };
 
     private static final int[] TYPES = new int[] {
     		R.raw.hiragana,
@@ -60,23 +61,21 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ListView listView = (ListView)findViewById(R.id.alphabet_listview);
+        ListView alphaListView = (ListView)findViewById(R.id.alphabet_listview);
 
-        listView.setAdapter(new ArrayAdapter<String>(this, R.layout.listview_item, ALPHABETS) {
+        alphaListView.setAdapter(new ArrayAdapter<String>(this, R.layout.listview_item, ALPHABETS) {
 	        @Override
 	        public int getViewTypeCount() {
-
 		        return getCount();
 	        }
 
 	        @Override
 	        public int getItemViewType(int position) {
-
 		        return position;
 	        }
         });
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        alphaListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             	if(!multiSelect)
 	            {
@@ -134,6 +133,27 @@ public class MainActivity extends AppCompatActivity
 			    intent.putExtra("alphabet", alphabet);
 			    startActivity(intent);
 
+		    }
+	    });
+
+
+	    ListView vocabListView = (ListView)findViewById(R.id.vocabulary_listview);
+
+	    vocabListView.setAdapter(new ArrayAdapter<String>(this, R.layout.listview_item, new String[]{ getString(R.string.expressions) }) {
+		    @Override
+		    public int getViewTypeCount() {
+			    return getCount();
+		    }
+
+		    @Override
+		    public int getItemViewType(int position) {
+			    return position;
+		    }
+	    });
+
+	    vocabListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+		    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+			    //goto vocabulary quiz
 		    }
 	    });
     }

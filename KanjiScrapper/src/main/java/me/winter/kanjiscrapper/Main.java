@@ -67,10 +67,17 @@ public class Main
 
 				romaji = romaji.replaceAll("" + (char)333, "ou");
 
-				if(romajiPart2.length() != 0)
-					romaji = romaji + "|" + romajiPart2.replaceAll("" + (char)333, "oo");
+				romajiPart2 = romajiPart2.replaceAll("" + (char)333, "oo");
+
+				if(romaji.length() == 0)
+					romaji = romajiPart2;
+
+				else if(romajiPart2.length() != 0)
+					romaji = romaji + "|" + romajiPart2;
 
 				romaji = romaji.replaceAll("" + (char)363, "uu").replaceAll("([a-z]+)-([a-z]+)", "$1|$1$2");
+
+				romaji = romaji.replace("imooto", "imouto").replace("otooto", "otouto"); //exceptions
 
 				String english = row.child(3).text().trim();
 

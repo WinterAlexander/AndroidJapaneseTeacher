@@ -181,7 +181,7 @@
 辞 ji|kotoba|ya|yameru @kanji_620
 辺 hen|ata|atari @kanji_621
 連 ren|tsu|tsureru|tsura|tsuraneru @kanji_622
-達 |tachi @kanji_623
+達 tachi @kanji_623
 選 sen|era|erabu @kanji_624
 郡 gun @kanji_625
 量 ryou @kanji_626

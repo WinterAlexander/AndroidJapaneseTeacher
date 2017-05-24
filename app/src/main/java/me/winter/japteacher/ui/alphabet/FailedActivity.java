@@ -3,6 +3,7 @@ package me.winter.japteacher.ui.alphabet;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -30,6 +31,8 @@ public class FailedActivity extends AppCompatActivity
         TextView answeredSymbol = (TextView)findViewById(R.id.answered_symbol);
         TextView answeredComment = (TextView)findViewById(R.id.ansered_comment);
 
+        boolean small = (answered != null && answered.getSymbol().length() > 1) || actual.getSymbol().length() > 1;
+
         if(answered != null)
         {
             answeredText.setText(unstackRomajis(answered.getRomaji()));
@@ -39,6 +42,9 @@ public class FailedActivity extends AppCompatActivity
                 answeredComment.setText(getResources().getIdentifier(answered.getComment().substring(1).trim(), "string", getPackageName()));
             else
                 answeredComment.setText(answered.getComment());
+
+
+            answeredSymbol.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(small ? R.dimen.failedscreen_symbolwidthsmall : R.dimen.failedscreen_symbolwidth));
         }
         else
         {
@@ -58,7 +64,10 @@ public class FailedActivity extends AppCompatActivity
         else
             actualComment.setText(actual.getComment());
 
-        TextView scoreDisplay = (TextView)findViewById(R.id.score);
+	    actualSymbol.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(small ? R.dimen.failedscreen_symbolwidthsmall : R.dimen.failedscreen_symbolwidth));
+
+
+	    TextView scoreDisplay = (TextView)findViewById(R.id.score);
 
         int score = getIntent().getIntExtra("score", -1);
         float avgTime = getIntent().getFloatExtra("avgTime", -1);

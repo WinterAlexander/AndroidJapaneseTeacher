@@ -118,10 +118,10 @@
 炭 tan|sumi @kanji_357
 物 butsu|motsu|mono @kanji_358
 球 kyuu|tama @kanji_359
-由 yuu|yu　|yoshi @kanji_360
+由 yuu|yu|yoshi @kanji_360
 申 shin|moo|moosu @kanji_361
 界 kai @kanji_362
-畑 |hata|hatake @kanji_363
+畑 hata|hatake @kanji_363
 病 byou|yamai @kanji_364
 発 hatsu @kanji_365
 登 tou|to|nobo|noboru @kanji_366

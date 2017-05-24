@@ -70,7 +70,7 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/answered_symbol"
                         android:text="ひゃ"
-                        android:textSize="120sp"
+                        android:textSize="@dimen/failedscreen_symbolwidthsmall"
                         android:textAlignment="center"
                         android:layout_weight="1"/>
                 <TextView
@@ -78,7 +78,7 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/actual_symbol"
                         android:text="後"
-                        android:textSize="120sp"
+                        android:textSize="@dimen/failedscreen_symbolwidth"
                         android:textAlignment="center"
                         android:layout_weight="1"/>
             </LinearLayout>

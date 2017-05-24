@@ -41,7 +41,7 @@
     />
 
     <ListView
-            android:id="@+id/other_quizzes_listview"
+            android:id="@+id/vocabulary_listview"
             android:layout_width="match_parent"
             android:layout_height="0sp"
             android:layout_weight="1">
